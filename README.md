@@ -5,13 +5,13 @@ The primary automation is done by the bash script, **auto-relax.sh**. The struct
 - charges.bin
 - {TOL}.gen
 - detailed.out
-- submit_<COF>-scc-<tolerance>
-- <COF>-scc-<tolerance>.log
+- submit_{COF}-scc-{tolerance}
+- {COF}-scc-{tolerance}.log
 
 **auto-relax.sh** also automatically calculates desired properties of the final structure. These properties are, including their output filename:
-- The atomic densities (<COF>.densities)
+- The atomic densities ({COF}.densities)
 - The cohesive energy and enthalpy of formation (Energies.dat)
-- Pore diameters, surface areas, and volumes (<COF>.res, <COF>.sa, and <COF>.vol)
+- Pore diameters, surface areas, and volumes ({COF}.res, {COF}.sa, and {COF}.vol)
 
 For a finished calculation, the final directory (1e-4-Outputs) will contain:
 - charges.bin
@@ -21,19 +21,19 @@ For a finished calculation, the final directory (1e-4-Outputs) will contain:
 - detailed.out
 - detailed.xml 
 - eigenvec.bin
-- <COF>-scc-1e-4.log
+- {COF}-scc-1e-4.log
 - band.out 
-- <COF>-Out-POSCAR
-- <COF>.densities
+- {COF}-Out-POSCAR
+- {COF}.densities
 - Energies.dat
-- <COF>.res
-- <COF>.sa
-- <COF>.vol
+- {COF}.res
+- {COF}.sa
+- {COF}.vol
 - OUTPUT.zeo
 
 This script can be executed by running **auto-relax.sh relax.in** where **relax.in** is the input script. The format of **relax.in** is described in [Relax.in](#relaxin). **auto-relax.sh** automatically generates the following files based on the user input into **relax.in**:
 1. dftb_in.hsd 
-2. submit_<COF>-scc-<TOL>
+2. submit_{COF}-scc-{TOL}
 
 ## Relax.in
 
