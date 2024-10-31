@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --account=design-lab
+#SBATCH --time=72:00:00
+#SBATCH --job-name=autorelax-TpPa1
+#SBATCH --output=autorelax-TpPa1.out
+#SBATCH --mem=2G
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=adavies2@uwyo.edu
+
+cd $SLURM_SUBMIT_DIR
+
+#layer-relax.sh relax.in
+auto-relax.sh relax.in
+#benchmark.sh relax.in
+#coordinate-driving.sh relax.in
+#coordinate-driving-vasp.sh relax.in
+Submitted batch job 3920773
