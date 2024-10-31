@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# AUTHOR: ALATHEA DAVIES AND TAYLOR KELSEY
+# AUTHORS: ALATHEA DAVIES AND TAYLOR KELSEY
 
 import numpy as np
 import ase.io
