@@ -181,7 +181,6 @@ gen_submit () {
 	SCRIPT_NAME=submit_$3
 
 	PROC=$((NODE * $1))
-    THREADS=$(($1 * $2))
 
 	cat > $SCRIPT_NAME<<!
 #!/bin/bash
@@ -195,7 +194,7 @@ gen_submit () {
 #SBATCH --partition=$4
 #SBATCH --mem=$MEM
 cd \$SLURM_SUBMIT_DIR
-export OMP_NUM_THREADS=$THREADS
+export OMP_NUM_THREADS=$2
 module load miniconda3/24.3.0
 conda activate /cluster/medbow/project/design-lab/software/DFTB+/dftb+
 mpirun -n $PROC dftb+ > $3.log
