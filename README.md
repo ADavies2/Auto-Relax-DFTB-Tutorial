@@ -53,12 +53,12 @@ RESTART(yes/no)
 PARTITION_NAME
 STACKING_CONFIGURATION(AB-StaggABCAA-Eclipse/None)
 
-The COF_NAME must be the name of your COF with word separations made only by hyphens or underscores, no spaces.
-The INITIAL_TOLERANCE may be any setting between 1e-1 and 1e-4. If 1e-4 is given, **auto-relax.sh** will automatically set Forces = 1e-4 and SCC = 1e-5. 
-The INITIAL_STRUCTURE_FILE is the filename that contains your initial structure coordinates. POSCAR or .gen file types are recommended against .xyz types as DFTB+ does not read extended .xyz formats, meaning that the simulation cell parameters will not be included. 
+- The COF_NAME must be the name of your COF with word separations made only by hyphens or underscores, no spaces.
+- The INITIAL_TOLERANCE may be any setting between 1e-1 and 1e-4. If 1e-4 is given, **auto-relax.sh** will automatically set Forces = 1e-4 and SCC = 1e-5. 
+- The INITIAL_STRUCTURE_FILE is the filename that contains your initial structure coordinates. POSCAR or .gen file types are recommended against .xyz types as DFTB+ does not read extended .xyz formats, meaning that the simulation cell parameters will not be included. 
 If the user has a previously converged charges.bin file for this system, they can initialize the DFTB+ calculation from that charges.bin file by setting RESTART to yes. If the user does not have a charges.bin file (i.e., this is a calculation from scratch), set RESTART to no.
-Give the desired partition name for the calculations to run on (mb, teton, inv-desousa, etc.).
-STACKING_CONFIGURATION will specify if the simulation cell angles will be fixed during the relaxation. Use this setting if you do not want the layers of your system to "slip", which is typically for AB-Stagg, ABC, or AA-Eclipse geometries. If you are modelling one of these three configurations, specify on this line either AB-Stagg, ABC, or AA-Eclipse. If you are not running one of these three geometries or do not want the simulation cell angles fixed, leave this line empty or type None.
+- Give the desired partition name for the calculations to run on (mb, teton, inv-desousa, etc.).
+- STACKING_CONFIGURATION will specify if the simulation cell angles will be fixed during the relaxation. Use this setting if you do not want the layers of your system to "slip", which is typically for AB-Stagg, ABC, or AA-Eclipse geometries. If you are modelling one of these three configurations, specify on this line either AB-Stagg, ABC, or AA-Eclipse. If you are not running one of these three geometries or do not want the simulation cell angles fixed, leave this line empty or type None.
 
 ## If the HPC environment changes...
 
