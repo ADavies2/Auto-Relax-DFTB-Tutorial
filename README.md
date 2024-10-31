@@ -59,7 +59,7 @@ If the user has a previously converged charges.bin file for this system, they ca
 
 ## If the HPC environment changes...
 
-If you would like to run this script on a different HPC enviornment, you will need to change the following lines within auto-relax.sh
+If you would like to run this script on a different HPC enviornment, you will need to change the following lines within **auto-relax.sh**
 
 - Line 128: <code>Prefix = "/project/design-lab/software/DFTB+/3ob-3-1/"</code>
     - Update the path to correctly point to your Slater-Koster files. 
