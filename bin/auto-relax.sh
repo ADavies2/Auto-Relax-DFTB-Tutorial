@@ -89,7 +89,7 @@ Driver = ConjugateGradient {
   LatticeOpt = Yes
   AppendGeometries = No
 !
-  if [[ $6 == "AB-Stagg" || $6 == "ABC" || $6 == "AA-Eclipse" ]]; then
+  if [[ $6 == "AB-Stagg" || $6 == "ABC" || $6 == "AA-Eclipsed" ]]; then
     printf "  FixAngles = Yes\n" >> dftb_in.hsd
     printf "  FixLengths = {No No No}\n" >> dftb_in.hsd
   fi
@@ -181,6 +181,7 @@ gen_submit () {
 	SCRIPT_NAME=submit_$3
 
 	PROC=$((NODE * $1))
+    THREADS=$(($1 * $2))
 
 	cat > $SCRIPT_NAME<<!
 #!/bin/bash
@@ -194,9 +195,9 @@ gen_submit () {
 #SBATCH --partition=$4
 #SBATCH --mem=$MEM
 cd \$SLURM_SUBMIT_DIR
-export OMP_NUM_THREADS=$2
+export OMP_NUM_THREADS=$THREADS
 module load miniconda3/24.3.0
-conda activate DFTB
+conda activate /cluster/medbow/project/design-lab/software/DFTB+/dftb+
 mpirun -n $PROC dftb+ > $3.log
 conda deactivate
 !
@@ -290,7 +291,7 @@ scc1 () {
               if [ ! -d "1e-4-Outputs" ]; then
                 mkdir '1e-4-Outputs'
               fi
-              densities=($(printf "$6\ngen\n1e-4-Out.gen" | atomdensities.py))
+              densities=($(printf "$6\ngen\n1e-4-Out.gen" | atomdensities))
               calculate_energies '1e-4-Out.gen' $6
               zeo $6
               mv detailed* $2.log 1e-4-Out.* charges.* eigenvec.bin submit_$2 Energies.dat *.densities *.res *.sa *.vol *.zeo band.out $6-Out-POSCAR 1e-4-Outputs/
