@@ -31,7 +31,7 @@ For a finished calculation, the final directory (1e-4-Outputs) will contain:
 - {COF}.vol
 - OUTPUT.zeo
 
-This script can be executed by running the following command: <code>auto-relax.sh relax.in</code>. 
+This script can be executed by running the following command: <code>auto-relax.sh relax.in {BASH-JOBNAME}</code>. 
 
 *PLEASE* use a submit script to submit this job to your queue manager. *DO NOT RUN IT IN COMMAND LINE VIA A LOG IN NODE.* [An example submit script](https://github.com/ADavies2/Auto-DFTB-Relax/tree/main/submit_auto-relax) has been provided for your guidance.
 
