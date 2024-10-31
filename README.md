@@ -63,7 +63,7 @@ If you would like to run this script on a different HPC enviornment, you will ne
 
 - Line 128: <code>Prefix = "/project/design-lab/software/DFTB+/3ob-3-1/"</code>
     - Update the path to correctly point to your Slater-Koster files. 
-- Lines 199-202: <code>module load miniconda3/24.3.0</code>
+- Lines 199-202: <code>module load miniconda3/24.3.0 ... conda deactivate</code>
     - Update the lines from 199-202 to correctly load and execute DFTB+. This version was built with a Conda enviornment.
 - Lines 243/245/247: <code>~/Software/zeo++-0.3/network...</code>
     - Update lines 243, 245 and 247 to include the correct path to your Zeo++ executable. 
