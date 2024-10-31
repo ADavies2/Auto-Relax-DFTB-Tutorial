@@ -44,19 +44,7 @@ An example calculation, along with output files, has been included in the direct
 
 ## Relax.in
 
- has been provided for your guidance. **relax.in** should contain 5 lines with only the information that you desire on them. Do not include comments on each line as the current version of auto-relax.sh does not know how to interpret these.
-
-COF_NAME
-
-INITIAL_TOLERANCE
-
-INITIAL_STRUCTURE_FILE
-
-RESTART(yes/no)
-
-PARTITION_NAME
-
-STACKING_CONFIGURATION(AB-StaggABCAA-Eclipse/None)
+ An example relax.in ()[] has been provided for your guidance. **relax.in** should contain 5 lines with only the information that you desire on them. Do not include comments on each line as the current version of auto-relax.sh does not know how to interpret these.
 
 - The COF_NAME must be the name of your COF with word separations made only by hyphens or underscores, no spaces.
 - The INITIAL_TOLERANCE may be any setting between 1e-1 and 1e-4. If 1e-4 is given, **auto-relax.sh** will automatically set Forces = 1e-4 and SCC = 1e-5. 
