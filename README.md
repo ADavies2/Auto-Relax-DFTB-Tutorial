@@ -70,6 +70,8 @@ If you would like to run this script on a different HPC enviornment, you will ne
 - Line 373: <code>module load gcc/14.2.0 python/3.12.0</code>
     - Update this line to load the appropriate modules required for running Python on your HPC.
 
+You will also need to make necessary changes to **submit_auto-relax** for your HPC enviornment.
+
 ## Known Issues
 
 - DFTB+ is known to "stall" on the MedicineBow HPC. When this happens, the calculation continues taking up time on the clock, but no data is written to the output files. **auto-relax.sh** attempts to account for this by checking for file size changes, and if the file size has not changed in 3 minutes, it assumes the job has stalled and kills the current iteraction job. Then, it uses the .gen produced from this iteration as the new input, lowers the number of tasks-per-node, and resubmits the calculation to restart from the last written point. It will be noted in **{BASH-JOBNAME}.out** when a job has stalled. 
