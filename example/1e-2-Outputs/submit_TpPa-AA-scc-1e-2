@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+#SBATCH --cpus-per-task=1
+#SBATCH --account=design-lab
+#SBATCH --time=72:00:00
+#SBATCH --job-name=TpPa-AA-scc-1e-2
+#SBATCH --output=TpPa-AA-scc-1e-2.out
+#SBATCH --partition=mb
+#SBATCH --mem=30GB
+cd $SLURM_SUBMIT_DIR
+export OMP_NUM_THREADS=1
+module load miniconda3/24.3.0
+conda activate DFTB
+mpirun -n 8 dftb+ > TpPa-AA-scc-1e-2.log
+conda deactivate

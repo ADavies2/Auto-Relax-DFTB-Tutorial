@@ -1,0 +1,113 @@
+High accuracy requested (DEF (default) settings). 
+Opening File: TpPa-AA.cif
+Radii analysis: the smallest atom r = 1.09 while the largest atoms r = 1.7.
+Starting Voronoi decomposition
+Box dimensions:
+  va=(22.865964 0 0)
+  vb=(-11.432944 19.802440 0)
+  vc=(0.000000 0.000000 3.537219)
+
+Total particles = 2472
+
+Internal grid size = (13 12 3)
+
+Using voro++ with radii for particles.
+Performing Voronoi decomposition.
+Volume check:
+  Total domain volume  = 1601.659439
+  Total Voronoi volume = 1601.659439
+Voronoi decomposition finished. Rerouting Voronoi network information.
+Finished rerouting information.
+Finished Voronoi decomposition
+Command 0  -ha
+Command 1  -res
+High accuracy requested (DEF (default) settings). 
+Opening File: TpPa-AA.cif
+Radii analysis: the smallest atom r = 1.09 while the largest atoms r = 1.7.
+Starting Voronoi decomposition
+Box dimensions:
+  va=(22.865964 0 0)
+  vb=(-11.432944 19.802440 0)
+  vc=(0.000000 0.000000 3.537219)
+
+Total particles = 2472
+
+Internal grid size = (13 12 3)
+
+Using voro++ with radii for particles.
+Performing Voronoi decomposition.
+Volume check:
+  Total domain volume  = 1601.659439
+  Total Voronoi volume = 1601.659439
+Voronoi decomposition finished. Rerouting Voronoi network information.
+Finished rerouting information.
+Finished Voronoi decomposition
+Command 0  -ha
+Command 1  -sa
+Box dimensions:
+  va=(22.865964 0 0)
+  vb=(-11.432944 19.802440 0)
+  vc=(0.000000 0.000000 3.537219)
+
+Total particles = 2472
+
+Internal grid size = (13 12 3)
+
+Using voro++ with radii for particles.
+Performing Voronoi decomposition.
+Volume check:
+  Total domain volume  = 1601.659439
+  Total Voronoi volume = 1601.659439
+Voronoi decomposition finished. Rerouting Voronoi network information.
+Finished rerouting information.
+Voronoi network with 13329 nodes. 155 of them are accessible. 
+
+Finding channels and pockets in Dijkstra network of 13329 node(s). 155 are expected to compose pores.
+Analyzed and assigned 13329 nodes.
+Identified 1 channels and 0 pockets.
+155 nodes assigned to pores. 
+High accuracy requested (DEF (default) settings). 
+Opening File: TpPa-AA.cif
+Radii analysis: the smallest atom r = 1.09 while the largest atoms r = 1.7.
+Starting Voronoi decomposition
+Box dimensions:
+  va=(22.865964 0 0)
+  vb=(-11.432944 19.802440 0)
+  vc=(0.000000 0.000000 3.537219)
+
+Total particles = 2472
+
+Internal grid size = (13 12 3)
+
+Using voro++ with radii for particles.
+Performing Voronoi decomposition.
+Volume check:
+  Total domain volume  = 1601.659439
+  Total Voronoi volume = 1601.659439
+Voronoi decomposition finished. Rerouting Voronoi network information.
+Finished rerouting information.
+Finished Voronoi decomposition
+Command 0  -ha
+Command 1  -vol
+Box dimensions:
+  va=(22.865964 0 0)
+  vb=(-11.432944 19.802440 0)
+  vc=(0.000000 0.000000 3.537219)
+
+Total particles = 2472
+
+Internal grid size = (13 12 3)
+
+Using voro++ with radii for particles.
+Performing Voronoi decomposition.
+Volume check:
+  Total domain volume  = 1601.659439
+  Total Voronoi volume = 1601.659439
+Voronoi decomposition finished. Rerouting Voronoi network information.
+Finished rerouting information.
+Voronoi network with 13329 nodes. 155 of them are accessible. 
+
+Finding channels and pockets in Dijkstra network of 13329 node(s). 155 are expected to compose pores.
+Analyzed and assigned 13329 nodes.
+Identified 1 channels and 0 pockets.
+155 nodes assigned to pores. 

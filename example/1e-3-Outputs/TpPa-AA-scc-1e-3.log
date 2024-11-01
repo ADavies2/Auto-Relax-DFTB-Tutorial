@@ -1,0 +1,3220 @@
+|===============================================================================
+|
+|  DFTB+ release 24.1
+|
+|  Copyright (C) 2006 - 2024  DFTB+ developers group
+|
+|===============================================================================
+|
+|  When publishing results obtained with DFTB+, please cite the following
+|  reference:
+|
+|  * DFTB+, a software package for efficient approximate density functional
+|    theory based atomistic simulations, J. Chem. Phys. 152, 124101 (2020).
+|    [doi: 10.1063/1.5143190]
+|
+|  You should also cite additional publications crediting the parametrization
+|  data you use. Please consult the documentation of the SK-files for the
+|  references.
+|
+|===============================================================================
+
+Reading input file 'dftb_in.hsd'
+Parser version: 14
+
+--------------------------------------------------------------------------------
+Reading SK-files:
+/project/design-lab/software/DFTB+/3ob-3-1/O-O.skf
+/project/design-lab/software/DFTB+/3ob-3-1/O-N.skf
+/project/design-lab/software/DFTB+/3ob-3-1/O-C.skf
+/project/design-lab/software/DFTB+/3ob-3-1/O-H.skf
+/project/design-lab/software/DFTB+/3ob-3-1/N-N.skf
+/project/design-lab/software/DFTB+/3ob-3-1/N-C.skf
+/project/design-lab/software/DFTB+/3ob-3-1/N-H.skf
+/project/design-lab/software/DFTB+/3ob-3-1/C-C.skf
+/project/design-lab/software/DFTB+/3ob-3-1/C-H.skf
+/project/design-lab/software/DFTB+/3ob-3-1/H-H.skf
+Done.
+WARNING!
+-> This driver is deprecated and will be removed in future versions.
+Please use the GeometryOptimisation driver instead.
+Path: dftbplusinput/Driver/ConjugateGradient
+Line: 5-13 (File: dftb_in.hsd)
+
+
+
+Processed input in HSD format written to 'dftb_pin.hsd'
+
+Starting initialization...
+--------------------------------------------------------------------------------
+WARNING!
+-> Dipole printed for extended system : value printed is not well defined
+MPI processes:               8
+OpenMP threads:              1
+BLACS orbital grid size:     2 x 4
+BLACS atom grid size:        2 x 3
+Chosen random seed:          534006043
+Current stacksize:           unlimited
+Mode:                        Conjugate gradient relaxation
+Self consistent charges:     Yes
+SCC-tolerance:                 0.100000E-02
+Max. scc iterations:                   1000
+Shell resolved Hubbard:      No
+Spin polarisation:           No
+Nr. of up electrons:           117.000000
+Nr. of down electrons:         117.000000
+Periodic boundaries:         Yes
+Lattice optimisation:        Yes
+Pressure:                        0.000000
+Electronic solver:           Relatively robust
+Mixer:                       Broyden mixer
+Mixing parameter:                  0.200000
+Maximal SCC-cycles:                    1000
+Nr. of chrg. vec. in memory:           1000
+Nr. of moved atoms:                      72
+Max. nr. of geometry steps:          100000
+Force tolerance:               0.100000E-02
+Electronic temperature:              0.100000E-07 H      0.272114E-06 eV
+Initial charges:             Read in from 'charges'
+Included shells:             O:  s, p
+                             N:  s, p
+                             C:  s, p
+                             H:  s
+K-points and weights:           1:  0.125000  0.125000  0.125000     0.031250
+                                2:  0.125000  0.125000  0.375000     0.031250
+                                3:  0.125000  0.125000  0.625000     0.031250
+                                4:  0.125000  0.125000  0.875000     0.031250
+                                5:  0.125000  0.375000  0.125000     0.031250
+                                6:  0.125000  0.375000  0.375000     0.031250
+                                7:  0.125000  0.375000  0.625000     0.031250
+                                8:  0.125000  0.375000  0.875000     0.031250
+                                9:  0.125000  0.625000  0.125000     0.031250
+                               10:  0.125000  0.625000  0.375000     0.031250
+                               11:  0.125000  0.625000  0.625000     0.031250
+                               12:  0.125000  0.625000  0.875000     0.031250
+                               13:  0.125000  0.875000  0.125000     0.031250
+                               14:  0.125000  0.875000  0.375000     0.031250
+                               15:  0.125000  0.875000  0.625000     0.031250
+                               16:  0.125000  0.875000  0.875000     0.031250
+                               17:  0.375000  0.125000  0.125000     0.031250
+                               18:  0.375000  0.125000  0.375000     0.031250
+                               19:  0.375000  0.125000  0.625000     0.031250
+                               20:  0.375000  0.125000  0.875000     0.031250
+                               21:  0.375000  0.375000  0.125000     0.031250
+                               22:  0.375000  0.375000  0.375000     0.031250
+                               23:  0.375000  0.375000  0.625000     0.031250
+                               24:  0.375000  0.375000  0.875000     0.031250
+                               25:  0.375000  0.625000  0.125000     0.031250
+                               26:  0.375000  0.625000  0.375000     0.031250
+                               27:  0.375000  0.625000  0.625000     0.031250
+                               28:  0.375000  0.625000  0.875000     0.031250
+                               29:  0.375000  0.875000  0.125000     0.031250
+                               30:  0.375000  0.875000  0.375000     0.031250
+                               31:  0.375000  0.875000  0.625000     0.031250
+                               32:  0.375000  0.875000  0.875000     0.031250
+
+K-points in absolute space:     1:  0.002864  0.004960  0.018484
+                                2:  0.002864  0.004960  0.055453
+                                3:  0.002864  0.004960  0.092422
+                                4:  0.002864  0.004960  0.129391
+                                5:  0.002864  0.011574  0.018484
+                                6:  0.002864  0.011574  0.055453
+                                7:  0.002864  0.011574  0.092422
+                                8:  0.002864  0.011574  0.129391
+                                9:  0.002864  0.018187  0.018484
+                               10:  0.002864  0.018187  0.055453
+                               11:  0.002864  0.018187  0.092422
+                               12:  0.002864  0.018187  0.129391
+                               13:  0.002864  0.024801  0.018484
+                               14:  0.002864  0.024801  0.055453
+                               15:  0.002864  0.024801  0.092422
+                               16:  0.002864  0.024801  0.129391
+                               17:  0.008591  0.008267  0.018484
+                               18:  0.008591  0.008267  0.055453
+                               19:  0.008591  0.008267  0.092422
+                               20:  0.008591  0.008267  0.129391
+                               21:  0.008591  0.014881  0.018484
+                               22:  0.008591  0.014881  0.055453
+                               23:  0.008591  0.014881  0.092422
+                               24:  0.008591  0.014881  0.129391
+                               25:  0.008591  0.021494  0.018484
+                               26:  0.008591  0.021494  0.055453
+                               27:  0.008591  0.021494  0.092422
+                               28:  0.008591  0.021494  0.129391
+                               29:  0.008591  0.028108  0.018484
+                               30:  0.008591  0.028108  0.055453
+                               31:  0.008591  0.028108  0.092422
+                               32:  0.008591  0.028108  0.129391
+
+Using Lennard-Jones dispersion corrections
+Full 3rd order correction    Yes
+Damped SCC                   Yes
+Damped species(s):           H                                                 
+Extra options:
+                             Mulliken analysis
+Force type                   original
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 0, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1    0.00000000E+00    0.00000000E+00    0.85457017E-02
+    2   -0.10666461E+03   -0.10666461E+03    0.55703364E-02
+    3   -0.10666463E+03   -0.17014603E-04    0.16717591E-02
+    4   -0.10666463E+03   -0.33781433E-05    0.31974310E-03
+
+Total Energy:                     -104.5392737205 H        -2844.6584 eV
+Extrapolated to 0K:               -104.5392737205 H        -2844.6584 eV
+Total Mermin free energy:         -104.5392737205 H        -2844.6584 eV
+Force related energy:             -104.5392737205 H        -2844.6584 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.566902E-05 au    -0.166788E+09 Pa
+Maximal force component:             0.727751E-02
+Averaged force norm:                 0.374764E-02
+Maximal Lattice force component:     0.540021E-02 au
+Averaged lattice force norm:         0.343148E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 1, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10666463E+03    0.00000000E+00    0.32773250E-01
+    2   -0.10663529E+03    0.29342520E-01    0.14262451E-01
+    3   -0.10663633E+03   -0.10397654E-02    0.84305697E-02
+    4   -0.10663638E+03   -0.53073227E-04    0.77964249E-03
+
+Total Energy:                     -104.5378574781 H        -2844.6198 eV
+Extrapolated to 0K:               -104.5378574781 H        -2844.6198 eV
+Total Mermin free energy:         -104.5378574781 H        -2844.6198 eV
+Force related energy:             -104.5378574781 H        -2844.6198 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.160514E-04 au    -0.472249E+09 Pa
+Maximal force component:             0.272616E-01
+Averaged force norm:                 0.123059E-01
+Maximal Lattice force component:     0.574983E-02 au
+Averaged lattice force norm:         0.558962E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 2, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10663639E+03    0.00000000E+00    0.18929971E-01
+    2   -0.10665305E+03   -0.16657987E-01    0.84480918E-02
+    3   -0.10665342E+03   -0.37143020E-03    0.48957773E-02
+    4   -0.10665344E+03   -0.21655360E-04    0.45475861E-03
+
+Total Energy:                     -104.5402514943 H        -2844.6850 eV
+Extrapolated to 0K:               -104.5402514943 H        -2844.6850 eV
+Total Mermin free energy:         -104.5402514943 H        -2844.6850 eV
+Force related energy:             -104.5402514943 H        -2844.6850 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.100686E-04 au    -0.296229E+09 Pa
+Maximal force component:             0.705347E-02
+Averaged force norm:                 0.431483E-02
+Maximal Lattice force component:     0.534586E-02 au
+Averaged lattice force norm:         0.417678E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 3, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10665344E+03    0.00000000E+00    0.24901245E-02
+    2   -0.10662444E+03    0.29007963E-01    0.17609303E-02
+    3   -0.10662444E+03   -0.78987298E-06    0.32357961E-03
+
+Total Energy:                     -104.5414016796 H        -2844.7163 eV
+Extrapolated to 0K:               -104.5414016796 H        -2844.7163 eV
+Total Mermin free energy:         -104.5414016796 H        -2844.7163 eV
+Force related energy:             -104.5414016796 H        -2844.7163 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.175744E-04 au    -0.517058E+09 Pa
+Maximal force component:             0.462128E-02
+Averaged force norm:                 0.257677E-02
+Maximal Lattice force component:     0.632409E-02 au
+Averaged lattice force norm:         0.602083E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 4, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10662444E+03    0.00000000E+00    0.36262404E-02
+    2   -0.10657676E+03    0.47674565E-01    0.25655044E-02
+    3   -0.10657676E+03   -0.21576944E-05    0.51760937E-03
+
+Total Energy:                     -104.5418665955 H        -2844.7289 eV
+Extrapolated to 0K:               -104.5418665955 H        -2844.7289 eV
+Total Mermin free energy:         -104.5418665955 H        -2844.7289 eV
+Force related energy:             -104.5418665955 H        -2844.7289 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.296147E-04 au    -0.871294E+09 Pa
+Maximal force component:             0.365288E-02
+Averaged force norm:                 0.208245E-02
+Maximal Lattice force component:     0.109382E-01 au
+Averaged lattice force norm:         0.945879E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 5, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10657676E+03    0.00000000E+00    0.93367916E-03
+
+Total Energy:                     -104.5419111271 H        -2844.7301 eV
+Extrapolated to 0K:               -104.5419111271 H        -2844.7301 eV
+Total Mermin free energy:         -104.5419111271 H        -2844.7301 eV
+Force related energy:             -104.5419111271 H        -2844.7301 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.270089E-04 au    -0.794628E+09 Pa
+Maximal force component:             0.287829E-02
+Averaged force norm:                 0.173179E-02
+Maximal Lattice force component:     0.994033E-02 au
+Averaged lattice force norm:         0.869025E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 6, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10658778E+03    0.00000000E+00    0.32385432E-01
+    2   -0.10663961E+03   -0.51828952E-01    0.18971979E-01
+    3   -0.10664015E+03   -0.54018029E-03    0.65856105E-02
+    4   -0.10664033E+03   -0.17849175E-03    0.27421028E-02
+    5   -0.10664034E+03   -0.98417918E-05    0.24796101E-03
+
+Total Energy:                     -104.5367555041 H        -2844.5898 eV
+Extrapolated to 0K:               -104.5367555041 H        -2844.5898 eV
+Total Mermin free energy:         -104.5367555041 H        -2844.5898 eV
+Force related energy:             -104.5367555041 H        -2844.5898 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.160709E-04 au    -0.472821E+09 Pa
+Maximal force component:             0.197547E-01
+Averaged force norm:                 0.127074E-01
+Maximal Lattice force component:     0.602614E-02 au
+Averaged lattice force norm:         0.580776E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 7, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10664034E+03    0.00000000E+00    0.29217695E-01
+    2   -0.10659375E+03    0.46586326E-01    0.16847025E-01
+    3   -0.10659420E+03   -0.44733711E-03    0.56088689E-02
+    4   -0.10659434E+03   -0.14230622E-03    0.24520890E-02
+    5   -0.10659435E+03   -0.74854370E-05    0.29169177E-03
+
+Total Energy:                     -104.5420396021 H        -2844.7336 eV
+Extrapolated to 0K:               -104.5420396021 H        -2844.7336 eV
+Total Mermin free energy:         -104.5420396021 H        -2844.7336 eV
+Force related energy:             -104.5420396021 H        -2844.7336 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.256567E-04 au    -0.754846E+09 Pa
+Maximal force component:             0.113000E-02
+Averaged force norm:                 0.701494E-03
+Maximal Lattice force component:     0.941464E-02 au
+Averaged lattice force norm:         0.831200E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 8, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659435E+03    0.00000000E+00    0.70940205E-03
+
+Total Energy:                     -104.5421144545 H        -2844.7357 eV
+Extrapolated to 0K:               -104.5421144545 H        -2844.7357 eV
+Total Mermin free energy:         -104.5421144545 H        -2844.7357 eV
+Force related energy:             -104.5421144545 H        -2844.7357 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.254512E-04 au    -0.748801E+09 Pa
+Maximal force component:             0.107907E-02
+Averaged force norm:                 0.637739E-03
+Maximal Lattice force component:     0.933677E-02 au
+Averaged lattice force norm:         0.824976E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 9, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659459E+03    0.00000000E+00    0.16179497E-02
+    2   -0.10659490E+03   -0.31039380E-03    0.11185643E-02
+    3   -0.10659490E+03   -0.23007819E-05    0.19487029E-03
+
+Total Energy:                     -104.5421189941 H        -2844.7358 eV
+Extrapolated to 0K:               -104.5421189941 H        -2844.7358 eV
+Total Mermin free energy:         -104.5421189941 H        -2844.7358 eV
+Force related energy:             -104.5421189941 H        -2844.7358 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.253516E-04 au    -0.745871E+09 Pa
+Maximal force component:             0.267658E-02
+Averaged force norm:                 0.148753E-02
+Maximal Lattice force component:     0.929793E-02 au
+Averaged lattice force norm:         0.822024E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 10, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659490E+03    0.00000000E+00    0.47569166E-03
+
+Total Energy:                     -104.5421347385 H        -2844.7362 eV
+Extrapolated to 0K:               -104.5421347385 H        -2844.7362 eV
+Total Mermin free energy:         -104.5421347385 H        -2844.7362 eV
+Force related energy:             -104.5421347385 H        -2844.7362 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.255138E-04 au    -0.750641E+09 Pa
+Maximal force component:             0.194039E-02
+Averaged force norm:                 0.104536E-02
+Maximal Lattice force component:     0.935941E-02 au
+Averaged lattice force norm:         0.826925E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 11, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659477E+03    0.00000000E+00    0.10895500E-02
+    2   -0.10659619E+03   -0.14271550E-02    0.82489288E-03
+
+Total Energy:                     -104.5422222513 H        -2844.7386 eV
+Extrapolated to 0K:               -104.5422222513 H        -2844.7386 eV
+Total Mermin free energy:         -104.5422222513 H        -2844.7386 eV
+Force related energy:             -104.5422222513 H        -2844.7386 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.250663E-04 au    -0.737475E+09 Pa
+Maximal force component:             0.163179E-02
+Averaged force norm:                 0.826491E-03
+Maximal Lattice force component:     0.919131E-02 au
+Averaged lattice force norm:         0.813501E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 12, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659619E+03    0.00000000E+00    0.21107370E-02
+    2   -0.10659830E+03   -0.21071132E-02    0.14968286E-02
+    3   -0.10659831E+03   -0.46684718E-05    0.77663974E-03
+
+Total Energy:                     -104.5420773610 H        -2844.7347 eV
+Extrapolated to 0K:               -104.5420773610 H        -2844.7347 eV
+Total Mermin free energy:         -104.5420773610 H        -2844.7347 eV
+Force related energy:             -104.5420773610 H        -2844.7347 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.244289E-04 au    -0.718723E+09 Pa
+Maximal force component:             0.477023E-02
+Averaged force norm:                 0.242284E-02
+Maximal Lattice force component:     0.895073E-02 au
+Averaged lattice force norm:         0.794765E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 13, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659831E+03    0.00000000E+00    0.98306730E-03
+
+Total Energy:                     -104.5422192344 H        -2844.7385 eV
+Extrapolated to 0K:               -104.5422192344 H        -2844.7385 eV
+Total Mermin free energy:         -104.5422192344 H        -2844.7385 eV
+Force related energy:             -104.5422192344 H        -2844.7385 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.251454E-04 au    -0.739803E+09 Pa
+Maximal force component:             0.175664E-02
+Averaged force norm:                 0.959153E-03
+Maximal Lattice force component:     0.921997E-02 au
+Averaged lattice force norm:         0.816308E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 14, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659640E+03    0.00000000E+00    0.24094728E-02
+    2   -0.10660366E+03   -0.72661089E-02    0.16811326E-02
+    3   -0.10660367E+03   -0.10466374E-04    0.84458148E-03
+
+Total Energy:                     -104.5422987864 H        -2844.7407 eV
+Extrapolated to 0K:               -104.5422987864 H        -2844.7407 eV
+Total Mermin free energy:         -104.5422987864 H        -2844.7407 eV
+Force related energy:             -104.5422987864 H        -2844.7407 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.235860E-04 au    -0.693924E+09 Pa
+Maximal force component:             0.159216E-02
+Averaged force norm:                 0.943428E-03
+Maximal Lattice force component:     0.861964E-02 au
+Averaged lattice force norm:         0.771717E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 15, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660367E+03    0.00000000E+00    0.82742657E-03
+
+Total Energy:                     -104.5422988208 H        -2844.7407 eV
+Extrapolated to 0K:               -104.5422988208 H        -2844.7407 eV
+Total Mermin free energy:         -104.5422988208 H        -2844.7407 eV
+Force related energy:             -104.5422988208 H        -2844.7407 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.235993E-04 au    -0.694316E+09 Pa
+Maximal force component:             0.158354E-02
+Averaged force norm:                 0.936811E-03
+Maximal Lattice force component:     0.862478E-02 au
+Averaged lattice force norm:         0.772087E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 16, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660361E+03    0.00000000E+00    0.23297008E-02
+    2   -0.10660141E+03    0.21990203E-02    0.14543108E-02
+    3   -0.10660142E+03   -0.18544534E-04    0.77501766E-03
+
+Total Energy:                     -104.5423708285 H        -2844.7426 eV
+Extrapolated to 0K:               -104.5423708285 H        -2844.7426 eV
+Total Mermin free energy:         -104.5423708285 H        -2844.7426 eV
+Force related energy:             -104.5423708285 H        -2844.7426 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.241504E-04 au    -0.710530E+09 Pa
+Maximal force component:             0.125464E-02
+Averaged force norm:                 0.946522E-03
+Maximal Lattice force component:     0.884426E-02 au
+Averaged lattice force norm:         0.786208E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 17, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660143E+03    0.00000000E+00    0.70811851E-03
+
+Total Energy:                     -104.5423709444 H        -2844.7427 eV
+Extrapolated to 0K:               -104.5423709444 H        -2844.7427 eV
+Total Mermin free energy:         -104.5423709444 H        -2844.7427 eV
+Force related energy:             -104.5423709444 H        -2844.7427 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.241430E-04 au    -0.710312E+09 Pa
+Maximal force component:             0.123115E-02
+Averaged force norm:                 0.929195E-03
+Maximal Lattice force component:     0.884110E-02 au
+Averaged lattice force norm:         0.786058E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 18, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660148E+03    0.00000000E+00    0.10995315E-02
+    2   -0.10660000E+03    0.14757254E-02    0.61903146E-03
+
+Total Energy:                     -104.5424643466 H        -2844.7452 eV
+Extrapolated to 0K:               -104.5424643466 H        -2844.7452 eV
+Total Mermin free energy:         -104.5424643466 H        -2844.7452 eV
+Force related energy:             -104.5424643466 H        -2844.7452 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.243453E-04 au    -0.716263E+09 Pa
+Maximal force component:             0.117707E-02
+Averaged force norm:                 0.749743E-03
+Maximal Lattice force component:     0.891605E-02 au
+Averaged lattice force norm:         0.792228E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 19, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660000E+03    0.00000000E+00    0.16465309E-02
+    2   -0.10659752E+03    0.24880138E-02    0.91019238E-03
+
+Total Energy:                     -104.5424255206 H        -2844.7441 eV
+Extrapolated to 0K:               -104.5424255206 H        -2844.7441 eV
+Total Mermin free energy:         -104.5424255206 H        -2844.7441 eV
+Force related energy:             -104.5424255206 H        -2844.7441 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.247355E-04 au    -0.727744E+09 Pa
+Maximal force component:             0.311428E-02
+Averaged force norm:                 0.182511E-02
+Maximal Lattice force component:     0.906431E-02 au
+Averaged lattice force norm:         0.803931E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 20, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659752E+03    0.00000000E+00    0.50207734E-03
+
+Total Energy:                     -104.5424773406 H        -2844.7455 eV
+Extrapolated to 0K:               -104.5424773406 H        -2844.7455 eV
+Total Mermin free energy:         -104.5424773406 H        -2844.7455 eV
+Force related energy:             -104.5424773406 H        -2844.7455 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.244749E-04 au    -0.720076E+09 Pa
+Maximal force component:             0.152492E-02
+Averaged force norm:                 0.102798E-02
+Maximal Lattice force component:     0.896574E-02 au
+Averaged lattice force norm:         0.795951E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 21, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659916E+03    0.00000000E+00    0.22066283E-02
+    2   -0.10660327E+03   -0.41133233E-02    0.14477856E-02
+    3   -0.10660327E+03   -0.17354705E-05    0.39001492E-03
+
+Total Energy:                     -104.5425584863 H        -2844.7478 eV
+Extrapolated to 0K:               -104.5425584863 H        -2844.7478 eV
+Total Mermin free energy:         -104.5425584863 H        -2844.7478 eV
+Force related energy:             -104.5425584863 H        -2844.7478 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.238963E-04 au    -0.703053E+09 Pa
+Maximal force component:             0.225579E-02
+Averaged force norm:                 0.126287E-02
+Maximal Lattice force component:     0.873999E-02 au
+Averaged lattice force norm:         0.780246E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 22, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660327E+03    0.00000000E+00    0.54703131E-03
+
+Total Energy:                     -104.5425613140 H        -2844.7478 eV
+Extrapolated to 0K:               -104.5425613140 H        -2844.7478 eV
+Total Mermin free energy:         -104.5425613140 H        -2844.7478 eV
+Force related energy:             -104.5425613140 H        -2844.7478 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.240651E-04 au    -0.708020E+09 Pa
+Maximal force component:             0.205863E-02
+Averaged force norm:                 0.106032E-02
+Maximal Lattice force component:     0.880587E-02 au
+Averaged lattice force norm:         0.784813E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 23, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660262E+03    0.00000000E+00    0.18565238E-02
+    2   -0.10659726E+03    0.53532701E-02    0.11606252E-02
+    3   -0.10659726E+03   -0.16553567E-05    0.31999975E-03
+
+Total Energy:                     -104.5426576952 H        -2844.7505 eV
+Extrapolated to 0K:               -104.5426576952 H        -2844.7505 eV
+Total Mermin free energy:         -104.5426576952 H        -2844.7505 eV
+Force related energy:             -104.5426576952 H        -2844.7505 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.248672E-04 au    -0.731618E+09 Pa
+Maximal force component:             0.124773E-02
+Averaged force norm:                 0.696402E-03
+Maximal Lattice force component:     0.911381E-02 au
+Averaged lattice force norm:         0.807737E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 24, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659726E+03    0.00000000E+00    0.22430943E-02
+    2   -0.10658844E+03    0.88247258E-02    0.14281395E-02
+    3   -0.10658844E+03   -0.24641337E-05    0.42219163E-03
+
+Total Energy:                     -104.5425612242 H        -2844.7478 eV
+Extrapolated to 0K:               -104.5425612242 H        -2844.7478 eV
+Total Mermin free energy:         -104.5425612242 H        -2844.7478 eV
+Force related energy:             -104.5425612242 H        -2844.7478 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.263412E-04 au    -0.774985E+09 Pa
+Maximal force component:             0.313833E-02
+Averaged force norm:                 0.202630E-02
+Maximal Lattice force component:     0.968206E-02 au
+Averaged lattice force norm:         0.849999E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 25, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10658844E+03    0.00000000E+00    0.17444968E-02
+    2   -0.10659560E+03   -0.71592517E-02    0.11079902E-02
+    3   -0.10659560E+03   -0.22513273E-05    0.34121611E-03
+
+Total Energy:                     -104.5426633178 H        -2844.7506 eV
+Extrapolated to 0K:               -104.5426633178 H        -2844.7506 eV
+Total Mermin free energy:         -104.5426633178 H        -2844.7506 eV
+Force related energy:             -104.5426633178 H        -2844.7506 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.251452E-04 au    -0.739796E+09 Pa
+Maximal force component:             0.132761E-02
+Averaged force norm:                 0.864453E-03
+Maximal Lattice force component:     0.922089E-02 au
+Averaged lattice force norm:         0.815668E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 26, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659561E+03    0.00000000E+00    0.30909009E-02
+    2   -0.10659761E+03   -0.20030875E-02    0.20197202E-02
+    3   -0.10659761E+03   -0.23236326E-05    0.33971068E-03
+
+Total Energy:                     -104.5427421503 H        -2844.7528 eV
+Extrapolated to 0K:               -104.5427421503 H        -2844.7528 eV
+Total Mermin free energy:         -104.5427421503 H        -2844.7528 eV
+Force related energy:             -104.5427421503 H        -2844.7528 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.249893E-04 au    -0.735211E+09 Pa
+Maximal force component:             0.205550E-02
+Averaged force norm:                 0.123212E-02
+Maximal Lattice force component:     0.916001E-02 au
+Averaged lattice force norm:         0.811588E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 27, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659761E+03    0.00000000E+00    0.34603587E-03
+
+Total Energy:                     -104.5427437920 H        -2844.7528 eV
+Extrapolated to 0K:               -104.5427437920 H        -2844.7528 eV
+Total Mermin free energy:         -104.5427437920 H        -2844.7528 eV
+Force related energy:             -104.5427437920 H        -2844.7528 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.249899E-04 au    -0.735228E+09 Pa
+Maximal force component:             0.175473E-02
+Averaged force norm:                 0.107173E-02
+Maximal Lattice force component:     0.916043E-02 au
+Averaged lattice force norm:         0.811529E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 28, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659736E+03    0.00000000E+00    0.12102060E-02
+    2   -0.10660042E+03   -0.30668200E-02    0.71902902E-03
+
+Total Energy:                     -104.5428573087 H        -2844.7559 eV
+Extrapolated to 0K:               -104.5428573087 H        -2844.7559 eV
+Total Mermin free energy:         -104.5428573087 H        -2844.7559 eV
+Force related energy:             -104.5428573087 H        -2844.7559 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.243869E-04 au    -0.717488E+09 Pa
+Maximal force component:             0.189137E-02
+Averaged force norm:                 0.864123E-03
+Maximal Lattice force component:     0.892946E-02 au
+Averaged lattice force norm:         0.793937E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 29, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660042E+03    0.00000000E+00    0.32415245E-02
+    2   -0.10660518E+03   -0.47588441E-02    0.19589891E-02
+    3   -0.10660519E+03   -0.29829259E-05    0.70754226E-03
+
+Total Energy:                     -104.5428791459 H        -2844.7565 eV
+Extrapolated to 0K:               -104.5428791459 H        -2844.7565 eV
+Total Mermin free energy:         -104.5428791459 H        -2844.7565 eV
+Force related energy:             -104.5428791459 H        -2844.7565 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.231660E-04 au    -0.681566E+09 Pa
+Maximal force component:             0.363653E-02
+Averaged force norm:                 0.185093E-02
+Maximal Lattice force component:     0.846219E-02 au
+Averaged lattice force norm:         0.758959E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 30, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660519E+03    0.00000000E+00    0.68574469E-03
+
+Total Energy:                     -104.5428938992 H        -2844.7569 eV
+Extrapolated to 0K:               -104.5428938992 H        -2844.7569 eV
+Total Mermin free energy:         -104.5428938992 H        -2844.7569 eV
+Force related energy:             -104.5428938992 H        -2844.7569 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.235228E-04 au    -0.692065E+09 Pa
+Maximal force component:             0.303578E-02
+Averaged force norm:                 0.140762E-02
+Maximal Lattice force component:     0.859745E-02 au
+Averaged lattice force norm:         0.769398E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 31, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660338E+03    0.00000000E+00    0.32339470E-02
+    2   -0.10660874E+03   -0.53615069E-02    0.21303774E-02
+    3   -0.10660874E+03   -0.16414738E-05    0.30576692E-03
+
+Total Energy:                     -104.5430557254 H        -2844.7613 eV
+Extrapolated to 0K:               -104.5430557254 H        -2844.7613 eV
+Total Mermin free energy:         -104.5430557254 H        -2844.7613 eV
+Force related energy:             -104.5430557254 H        -2844.7613 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.220945E-04 au    -0.650043E+09 Pa
+Maximal force component:             0.189502E-02
+Averaged force norm:                 0.108787E-02
+Maximal Lattice force component:     0.805015E-02 au
+Averaged lattice force norm:         0.728737E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 32, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660874E+03    0.00000000E+00    0.42209580E-02
+    2   -0.10661672E+03   -0.79709172E-02    0.30266032E-02
+    3   -0.10661672E+03   -0.33680043E-05    0.53395938E-03
+
+Total Energy:                     -104.5427767442 H        -2844.7537 eV
+Extrapolated to 0K:               -104.5427767442 H        -2844.7537 eV
+Total Mermin free energy:         -104.5427767442 H        -2844.7537 eV
+Force related energy:             -104.5427767442 H        -2844.7537 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.197993E-04 au    -0.582516E+09 Pa
+Maximal force component:             0.624779E-02
+Averaged force norm:                 0.334296E-02
+Maximal Lattice force component:     0.717059E-02 au
+Averaged lattice force norm:         0.664991E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 33, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10661672E+03    0.00000000E+00    0.35474520E-02
+    2   -0.10660942E+03    0.72977121E-02    0.25223406E-02
+    3   -0.10660943E+03   -0.43183614E-05    0.42787140E-03
+
+Total Energy:                     -104.5430578221 H        -2844.7613 eV
+Extrapolated to 0K:               -104.5430578221 H        -2844.7613 eV
+Total Mermin free energy:         -104.5430578221 H        -2844.7613 eV
+Force related energy:             -104.5430578221 H        -2844.7613 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.218573E-04 au    -0.643064E+09 Pa
+Maximal force component:             0.194222E-02
+Averaged force norm:                 0.122030E-02
+Maximal Lattice force component:     0.795922E-02 au
+Averaged lattice force norm:         0.722066E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 34, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660943E+03    0.00000000E+00    0.12416389E-02
+    2   -0.10660813E+03    0.12947660E-02    0.94399612E-03
+
+Total Energy:                     -104.5431730164 H        -2844.7645 eV
+Extrapolated to 0K:               -104.5431730164 H        -2844.7645 eV
+Total Mermin free energy:         -104.5431730164 H        -2844.7645 eV
+Force related energy:             -104.5431730164 H        -2844.7645 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.218540E-04 au    -0.642966E+09 Pa
+Maximal force component:             0.159783E-02
+Averaged force norm:                 0.951999E-03
+Maximal Lattice force component:     0.795890E-02 au
+Averaged lattice force norm:         0.721775E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 35, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660813E+03    0.00000000E+00    0.76112963E-03
+
+Total Energy:                     -104.5431842000 H        -2844.7648 eV
+Extrapolated to 0K:               -104.5431842000 H        -2844.7648 eV
+Total Mermin free energy:         -104.5431842000 H        -2844.7648 eV
+Force related energy:             -104.5431842000 H        -2844.7648 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.218273E-04 au    -0.642181E+09 Pa
+Maximal force component:             0.157035E-02
+Averaged force norm:                 0.674223E-03
+Maximal Lattice force component:     0.794841E-02 au
+Averaged lattice force norm:         0.721075E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 36, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660846E+03    0.00000000E+00    0.34822802E-02
+    2   -0.10660160E+03    0.68621915E-02    0.21606032E-02
+    3   -0.10660161E+03   -0.96436873E-05    0.92154144E-03
+
+Total Energy:                     -104.5431704797 H        -2844.7644 eV
+Extrapolated to 0K:               -104.5431704797 H        -2844.7644 eV
+Total Mermin free energy:         -104.5431704797 H        -2844.7644 eV
+Force related energy:             -104.5431704797 H        -2844.7644 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.230175E-04 au    -0.677199E+09 Pa
+Maximal force component:             0.438492E-02
+Averaged force norm:                 0.216305E-02
+Maximal Lattice force component:     0.841153E-02 au
+Averaged lattice force norm:         0.753586E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 37, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660161E+03    0.00000000E+00    0.15896915E-02
+    2   -0.10660521E+03   -0.36001536E-02    0.10298594E-02
+    3   -0.10660521E+03   -0.33352751E-05    0.33402818E-03
+
+Total Energy:                     -104.5432352857 H        -2844.7662 eV
+Extrapolated to 0K:               -104.5432352857 H        -2844.7662 eV
+Total Mermin free energy:         -104.5432352857 H        -2844.7662 eV
+Force related energy:             -104.5432352857 H        -2844.7662 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.223325E-04 au    -0.657046E+09 Pa
+Maximal force component:             0.220895E-02
+Averaged force norm:                 0.990208E-03
+Maximal Lattice force component:     0.814403E-02 au
+Averaged lattice force norm:         0.734877E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 38, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660521E+03    0.00000000E+00    0.86042125E-03
+
+Total Energy:                     -104.5433128174 H        -2844.7683 eV
+Extrapolated to 0K:               -104.5433128174 H        -2844.7683 eV
+Total Mermin free energy:         -104.5433128174 H        -2844.7683 eV
+Force related energy:             -104.5433128174 H        -2844.7683 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.227598E-04 au    -0.669616E+09 Pa
+Maximal force component:             0.186961E-02
+Averaged force norm:                 0.786545E-03
+Maximal Lattice force component:     0.830459E-02 au
+Averaged lattice force norm:         0.747652E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 39, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660368E+03    0.00000000E+00    0.23347196E-02
+    2   -0.10660110E+03    0.25719549E-02    0.13681850E-02
+    3   -0.10660111E+03   -0.30164323E-05    0.55278227E-03
+
+Total Energy:                     -104.5433526613 H        -2844.7694 eV
+Extrapolated to 0K:               -104.5433526613 H        -2844.7694 eV
+Total Mermin free energy:         -104.5433526613 H        -2844.7694 eV
+Force related energy:             -104.5433526613 H        -2844.7694 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.235917E-04 au    -0.694093E+09 Pa
+Maximal force component:             0.207699E-02
+Averaged force norm:                 0.122605E-02
+Maximal Lattice force component:     0.862327E-02 au
+Averaged lattice force norm:         0.771565E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 40, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660111E+03    0.00000000E+00    0.50135902E-03
+
+Total Energy:                     -104.5433535835 H        -2844.7694 eV
+Extrapolated to 0K:               -104.5433535835 H        -2844.7694 eV
+Total Mermin free energy:         -104.5433535835 H        -2844.7694 eV
+Force related energy:             -104.5433535835 H        -2844.7694 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.234997E-04 au    -0.691384E+09 Pa
+Maximal force component:             0.191724E-02
+Averaged force norm:                 0.113533E-02
+Maximal Lattice force component:     0.858843E-02 au
+Averaged lattice force norm:         0.768801E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 41, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660145E+03    0.00000000E+00    0.14604516E-02
+    2   -0.10659062E+03    0.10829413E-01    0.73723659E-03
+
+Total Energy:                     -104.5434464485 H        -2844.7719 eV
+Extrapolated to 0K:               -104.5434464485 H        -2844.7719 eV
+Total Mermin free energy:         -104.5434464485 H        -2844.7719 eV
+Force related energy:             -104.5434464485 H        -2844.7719 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.259387E-04 au    -0.763143E+09 Pa
+Maximal force component:             0.147498E-02
+Averaged force norm:                 0.950656E-03
+Maximal Lattice force component:     0.952499E-02 au
+Averaged lattice force norm:         0.838898E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 42, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659063E+03    0.00000000E+00    0.48317026E-03
+
+Total Energy:                     -104.5434526846 H        -2844.7721 eV
+Extrapolated to 0K:               -104.5434526846 H        -2844.7721 eV
+Total Mermin free energy:         -104.5434526846 H        -2844.7721 eV
+Force related energy:             -104.5434526846 H        -2844.7721 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.254866E-04 au    -0.749842E+09 Pa
+Maximal force component:             0.104638E-02
+Averaged force norm:                 0.746155E-03
+Maximal Lattice force component:     0.935092E-02 au
+Averaged lattice force norm:         0.825858E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 43, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659264E+03    0.00000000E+00    0.45797237E-02
+    2   -0.10659658E+03   -0.39381791E-02    0.13814708E-02
+    3   -0.10659663E+03   -0.48112138E-04    0.75781185E-03
+
+Total Energy:                     -104.5434193578 H        -2844.7712 eV
+Extrapolated to 0K:               -104.5434193578 H        -2844.7712 eV
+Total Mermin free energy:         -104.5434193578 H        -2844.7712 eV
+Force related energy:             -104.5434193578 H        -2844.7712 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.245264E-04 au    -0.721591E+09 Pa
+Maximal force component:             0.537984E-02
+Averaged force norm:                 0.205710E-02
+Maximal Lattice force component:     0.898388E-02 au
+Averaged lattice force norm:         0.797841E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 44, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659663E+03    0.00000000E+00    0.25579412E-02
+    2   -0.10659434E+03    0.22876670E-02    0.68347659E-03
+
+Total Energy:                     -104.5434934111 H        -2844.7732 eV
+Extrapolated to 0K:               -104.5434934111 H        -2844.7732 eV
+Total Mermin free energy:         -104.5434934111 H        -2844.7732 eV
+Force related energy:             -104.5434934111 H        -2844.7732 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.251425E-04 au    -0.739719E+09 Pa
+Maximal force component:             0.175004E-02
+Averaged force norm:                 0.801064E-03
+Maximal Lattice force component:     0.921820E-02 au
+Averaged lattice force norm:         0.816027E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 45, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659436E+03    0.00000000E+00    0.20066925E-02
+    2   -0.10659767E+03   -0.33077823E-02    0.11049549E-02
+    3   -0.10659767E+03   -0.33444136E-05    0.35824129E-03
+
+Total Energy:                     -104.5435463293 H        -2844.7746 eV
+Extrapolated to 0K:               -104.5435463293 H        -2844.7746 eV
+Total Mermin free energy:         -104.5435463293 H        -2844.7746 eV
+Force related energy:             -104.5435463293 H        -2844.7746 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.243330E-04 au    -0.715900E+09 Pa
+Maximal force component:             0.115806E-02
+Averaged force norm:                 0.591581E-03
+Maximal Lattice force component:     0.890370E-02 au
+Averaged lattice force norm:         0.793482E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 46, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659767E+03    0.00000000E+00    0.32566881E-02
+    2   -0.10660293E+03   -0.52549097E-02    0.20037730E-02
+    3   -0.10660293E+03   -0.42526252E-05    0.47828438E-03
+
+Total Energy:                     -104.5435353338 H        -2844.7743 eV
+Extrapolated to 0K:               -104.5435353338 H        -2844.7743 eV
+Total Mermin free energy:         -104.5435353338 H        -2844.7743 eV
+Force related energy:             -104.5435353338 H        -2844.7743 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.233222E-04 au    -0.686162E+09 Pa
+Maximal force component:             0.210578E-02
+Averaged force norm:                 0.123207E-02
+Maximal Lattice force component:     0.851114E-02 au
+Averaged lattice force norm:         0.765960E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 47, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10660293E+03    0.00000000E+00    0.15282432E-02
+    2   -0.10659988E+03    0.30524431E-02    0.94901700E-03
+
+Total Energy:                     -104.5435555840 H        -2844.7749 eV
+Extrapolated to 0K:               -104.5435555840 H        -2844.7749 eV
+Total Mermin free energy:         -104.5435555840 H        -2844.7749 eV
+Force related energy:             -104.5435555840 H        -2844.7749 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.240931E-04 au    -0.708845E+09 Pa
+Maximal force component:             0.154788E-02
+Averaged force norm:                 0.816862E-03
+Maximal Lattice force component:     0.881099E-02 au
+Averaged lattice force norm:         0.786817E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 48, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659988E+03    0.00000000E+00    0.38844074E-02
+    2   -0.10659571E+03    0.41749247E-02    0.22627177E-02
+    3   -0.10659572E+03   -0.17694176E-04    0.93953592E-03
+
+Total Energy:                     -104.5435654303 H        -2844.7752 eV
+Extrapolated to 0K:               -104.5435654303 H        -2844.7752 eV
+Total Mermin free energy:         -104.5435654303 H        -2844.7752 eV
+Force related energy:             -104.5435654303 H        -2844.7752 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.247712E-04 au    -0.728794E+09 Pa
+Maximal force component:             0.156547E-02
+Averaged force norm:                 0.889821E-03
+Maximal Lattice force component:     0.907365E-02 au
+Averaged lattice force norm:         0.805814E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 49, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659573E+03    0.00000000E+00    0.94204205E-03
+
+Total Energy:                     -104.5435853128 H        -2844.7757 eV
+Extrapolated to 0K:               -104.5435853128 H        -2844.7757 eV
+Total Mermin free energy:         -104.5435853128 H        -2844.7757 eV
+Force related energy:             -104.5435853128 H        -2844.7757 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.244458E-04 au    -0.719219E+09 Pa
+Maximal force component:             0.883023E-03
+Averaged force norm:                 0.473045E-03
+Maximal Lattice force component:     0.894490E-02 au
+Averaged lattice force norm:         0.797241E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 50, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659758E+03    0.00000000E+00    0.94204205E-03
+
+Total Energy:                     -104.5435853128 H        -2844.7757 eV
+Extrapolated to 0K:               -104.5435853128 H        -2844.7757 eV
+Total Mermin free energy:         -104.5435853128 H        -2844.7757 eV
+Force related energy:             -104.5435853128 H        -2844.7757 eV
+
+Volume:                              0.111579E+05 au^3   0.165343E+04 A^3
+Pressure:                           -0.244458E-04 au    -0.719219E+09 Pa
+Maximal force component:             0.883023E-03
+Averaged force norm:                 0.473045E-03
+Maximal Lattice force component:     0.894490E-02 au
+Averaged lattice force norm:         0.797241E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 51, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10659758E+03    0.00000000E+00    0.53983520E-01
+    2   -0.10787700E+03   -0.12794156E+01    0.33752915E-01
+    3   -0.10787768E+03   -0.68299687E-03    0.66454124E-02
+    4   -0.10787792E+03   -0.23537031E-03    0.19045176E-02
+    5   -0.10787794E+03   -0.22696118E-04    0.32746659E-03
+
+Total Energy:                     -104.2969712631 H        -2838.0650 eV
+Extrapolated to 0K:               -104.2969712631 H        -2838.0650 eV
+Total Mermin free energy:         -104.2969712631 H        -2838.0650 eV
+Force related energy:             -104.2969712631 H        -2838.0650 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.407220E-03 au     0.119808E+11 Pa
+Maximal force component:             0.111257E+00
+Averaged force norm:                 0.474094E-01
+Maximal Lattice force component:     0.144253E+00 au
+Averaged lattice force norm:         0.117918E+00 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 52, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10787794E+03    0.00000000E+00    0.16087082E+00
+    2   -0.10715687E+03    0.72107682E+00    0.10018813E+00
+    3   -0.10717134E+03   -0.14476161E-01    0.41729264E-01
+    4   -0.10717498E+03   -0.36378459E-02    0.14689677E-01
+    5   -0.10717527E+03   -0.28594627E-03    0.30809711E-02
+    6   -0.10717532E+03   -0.52781453E-04    0.20388238E-02
+    7   -0.10717532E+03   -0.18748838E-06    0.38376134E-03
+
+Total Energy:                     -104.3412031496 H        -2839.2686 eV
+Extrapolated to 0K:               -104.3412031496 H        -2839.2686 eV
+Total Mermin free energy:         -104.3412031496 H        -2839.2686 eV
+Force related energy:             -104.3412031496 H        -2839.2686 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.228237E-03 au     0.671496E+10 Pa
+Maximal force component:             0.126683E+00
+Averaged force norm:                 0.536947E-01
+Maximal Lattice force component:     0.802077E-01 au
+Averaged lattice force norm:         0.659642E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 53, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10717532E+03    0.00000000E+00    0.41295857E-01
+    2   -0.10738965E+03   -0.21432692E+00    0.28479673E-01
+    3   -0.10739124E+03   -0.15924262E-02    0.16226150E-01
+    4   -0.10739154E+03   -0.29714237E-03    0.40162470E-02
+    5   -0.10739157E+03   -0.33851393E-04    0.96890302E-03
+
+Total Energy:                     -104.3726380412 H        -2840.1240 eV
+Extrapolated to 0K:               -104.3726380412 H        -2840.1240 eV
+Total Mermin free energy:         -104.3726380412 H        -2840.1240 eV
+Force related energy:             -104.3726380412 H        -2840.1240 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.276036E-03 au     0.812126E+10 Pa
+Maximal force component:             0.859235E-01
+Averaged force norm:                 0.363564E-01
+Maximal Lattice force component:     0.973303E-01 au
+Averaged lattice force norm:         0.797931E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 54, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10739157E+03    0.00000000E+00    0.34637766E-01
+    2   -0.10711050E+03    0.28107656E+00    0.19061542E-01
+    3   -0.10711119E+03   -0.69664513E-03    0.82267642E-02
+    4   -0.10711127E+03   -0.79510338E-04    0.21907522E-02
+    5   -0.10711128E+03   -0.84998146E-05    0.12702825E-03
+
+Total Energy:                     -104.4440682868 H        -2842.0677 eV
+Extrapolated to 0K:               -104.4440682868 H        -2842.0677 eV
+Total Mermin free energy:         -104.4440682868 H        -2842.0677 eV
+Force related energy:             -104.4440682868 H        -2842.0677 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.184603E-03 au     0.543121E+10 Pa
+Maximal force component:             0.584539E-01
+Averaged force norm:                 0.255690E-01
+Maximal Lattice force component:     0.648057E-01 au
+Averaged lattice force norm:         0.533606E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 55, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10711128E+03    0.00000000E+00    0.55199611E-01
+    2   -0.10662797E+03    0.48331065E+00    0.30071530E-01
+    3   -0.10662964E+03   -0.16611853E-02    0.12639812E-01
+    4   -0.10662988E+03   -0.24384224E-03    0.37935142E-02
+    5   -0.10662990E+03   -0.17594857E-04    0.24493881E-03
+
+Total Energy:                     -104.4457715078 H        -2842.1140 eV
+Extrapolated to 0K:               -104.4457715078 H        -2842.1140 eV
+Total Mermin free energy:         -104.4457715078 H        -2842.1140 eV
+Force related energy:             -104.4457715078 H        -2842.1140 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.532413E-04 au     0.156641E+10 Pa
+Maximal force component:             0.576073E-01
+Averaged force norm:                 0.321220E-01
+Maximal Lattice force component:     0.180916E-01 au
+Averaged lattice force norm:         0.160952E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 56, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10662990E+03    0.00000000E+00    0.24579751E-01
+    2   -0.10686133E+03   -0.23142730E+00    0.13970273E-01
+    3   -0.10686164E+03   -0.30752533E-03    0.57551009E-02
+    4   -0.10686169E+03   -0.52986381E-04    0.17247714E-02
+    5   -0.10686169E+03   -0.38156544E-05    0.96890101E-04
+
+Total Energy:                     -104.4614259972 H        -2842.5400 eV
+Extrapolated to 0K:               -104.4614259972 H        -2842.5400 eV
+Total Mermin free energy:         -104.4614259972 H        -2842.5400 eV
+Force related energy:             -104.4614259972 H        -2842.5400 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.113137E-03 au     0.332859E+10 Pa
+Maximal force component:             0.391161E-01
+Averaged force norm:                 0.259097E-01
+Maximal Lattice force component:     0.393890E-01 au
+Averaged lattice force norm:         0.328383E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 57, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10686170E+03    0.00000000E+00    0.27857532E+00
+    2   -0.10707446E+03   -0.21276022E+00    0.20570118E+00
+    3   -0.10714518E+03   -0.70722485E-01    0.85452881E-01
+    4   -0.10716315E+03   -0.17972730E-01    0.12503752E-01
+    5   -0.10716531E+03   -0.21596632E-02    0.84604037E-02
+    6   -0.10716543E+03   -0.11622161E-03    0.24403134E-02
+    7   -0.10716546E+03   -0.31436820E-04    0.60492652E-03
+
+Total Energy:                     -104.2408288240 H        -2836.5373 eV
+Extrapolated to 0K:               -104.2408288240 H        -2836.5373 eV
+Total Mermin free energy:         -104.2408288240 H        -2836.5373 eV
+Force related energy:             -104.2408288240 H        -2836.5373 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.199548E-03 au     0.587090E+10 Pa
+Maximal force component:             0.198500E+00
+Averaged force norm:                 0.105515E+00
+Maximal Lattice force component:     0.706217E-01 au
+Averaged lattice force norm:         0.577548E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 58, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10716546E+03    0.00000000E+00    0.25289977E+00
+    2   -0.10681206E+03    0.35339810E+00    0.17019704E+00
+    3   -0.10687634E+03   -0.64280559E-01    0.59224507E-01
+    4   -0.10688718E+03   -0.10841600E-01    0.10645545E-01
+    5   -0.10688838E+03   -0.11962917E-02    0.57263440E-02
+    6   -0.10688844E+03   -0.57964787E-04    0.22956172E-02
+    7   -0.10688845E+03   -0.79659628E-05    0.42374733E-03
+
+Total Energy:                     -104.4837350735 H        -2843.1471 eV
+Extrapolated to 0K:               -104.4837350735 H        -2843.1471 eV
+Total Mermin free energy:         -104.4837350735 H        -2843.1471 eV
+Force related energy:             -104.4837350735 H        -2843.1471 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.114664E-03 au     0.337353E+10 Pa
+Maximal force component:             0.128963E-01
+Averaged force norm:                 0.775854E-02
+Maximal Lattice force component:     0.400660E-01 au
+Averaged lattice force norm:         0.331990E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 59, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10688845E+03    0.00000000E+00    0.34320055E-01
+    2   -0.10696147E+03   -0.73024730E-01    0.18365501E-01
+    3   -0.10696215E+03   -0.67559070E-03    0.83680559E-02
+    4   -0.10696220E+03   -0.51629129E-04    0.96917541E-03
+
+Total Energy:                     -104.4843598068 H        -2843.1641 eV
+Extrapolated to 0K:               -104.4843598068 H        -2843.1641 eV
+Total Mermin free energy:         -104.4843598068 H        -2843.1641 eV
+Force related energy:             -104.4843598068 H        -2843.1641 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.130718E-03 au     0.384586E+10 Pa
+Maximal force component:             0.281759E-01
+Averaged force norm:                 0.151364E-01
+Maximal Lattice force component:     0.457877E-01 au
+Averaged lattice force norm:         0.378065E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 60, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10696221E+03    0.00000000E+00    0.16200150E-01
+    2   -0.10692654E+03    0.35674439E-01    0.86052181E-02
+    3   -0.10692670E+03   -0.16930263E-03    0.39628360E-02
+    4   -0.10692672E+03   -0.14484308E-04    0.58397646E-03
+
+Total Energy:                     -104.4869957726 H        -2843.2358 eV
+Extrapolated to 0K:               -104.4869957726 H        -2843.2358 eV
+Total Mermin free energy:         -104.4869957726 H        -2843.2358 eV
+Force related energy:             -104.4869957726 H        -2843.2358 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.122569E-03 au     0.360610E+10 Pa
+Maximal force component:             0.136985E-01
+Averaged force norm:                 0.706818E-02
+Maximal Lattice force component:     0.428854E-01 au
+Averaged lattice force norm:         0.354650E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 61, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10692672E+03    0.00000000E+00    0.11740103E-01
+    2   -0.10693089E+03   -0.41683240E-02    0.56650758E-02
+    3   -0.10693104E+03   -0.14853827E-03    0.34794322E-02
+    4   -0.10693105E+03   -0.12795152E-04    0.53946198E-03
+
+Total Energy:                     -104.4895240953 H        -2843.3046 eV
+Extrapolated to 0K:               -104.4895240953 H        -2843.3046 eV
+Total Mermin free energy:         -104.4895240953 H        -2843.3046 eV
+Force related energy:             -104.4895240953 H        -2843.3046 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.122869E-03 au     0.361493E+10 Pa
+Maximal force component:             0.722693E-02
+Averaged force norm:                 0.437239E-02
+Maximal Lattice force component:     0.430024E-01 au
+Averaged lattice force norm:         0.355474E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 62, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10693105E+03    0.00000000E+00    0.19060966E-01
+    2   -0.10693520E+03   -0.41474514E-02    0.94156805E-02
+    3   -0.10693556E+03   -0.36402466E-03    0.56848393E-02
+    4   -0.10693559E+03   -0.28113506E-04    0.76999484E-03
+
+Total Energy:                     -104.4844574009 H        -2843.1667 eV
+Extrapolated to 0K:               -104.4844574009 H        -2843.1667 eV
+Total Mermin free energy:         -104.4844574009 H        -2843.1667 eV
+Force related energy:             -104.4844574009 H        -2843.1667 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.124812E-03 au     0.367209E+10 Pa
+Maximal force component:             0.341598E-01
+Averaged force norm:                 0.159840E-01
+Maximal Lattice force component:     0.437112E-01 au
+Averaged lattice force norm:         0.361000E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 63, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10693560E+03    0.00000000E+00    0.16776205E-01
+    2   -0.10693101E+03    0.45906277E-02    0.80099925E-02
+    3   -0.10693133E+03   -0.32479456E-03    0.49394939E-02
+    4   -0.10693136E+03   -0.28165644E-04    0.80876230E-03
+
+Total Energy:                     -104.4895392435 H        -2843.3050 eV
+Extrapolated to 0K:               -104.4895392435 H        -2843.3050 eV
+Total Mermin free energy:         -104.4895392435 H        -2843.3050 eV
+Force related energy:             -104.4895392435 H        -2843.3050 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.123161E-03 au     0.362353E+10 Pa
+Maximal force component:             0.727182E-02
+Averaged force norm:                 0.475152E-02
+Maximal Lattice force component:     0.431092E-01 au
+Averaged lattice force norm:         0.356304E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 64, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10693136E+03    0.00000000E+00    0.89479665E-02
+    2   -0.10690813E+03    0.23237254E-01    0.64626159E-02
+    3   -0.10690827E+03   -0.14473525E-03    0.31597278E-02
+    4   -0.10690829E+03   -0.17650635E-04    0.46584420E-03
+
+Total Energy:                     -104.4913330280 H        -2843.3538 eV
+Extrapolated to 0K:               -104.4913330280 H        -2843.3538 eV
+Total Mermin free energy:         -104.4913330280 H        -2843.3538 eV
+Force related energy:             -104.4913330280 H        -2843.3538 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.116126E-03 au     0.341655E+10 Pa
+Maximal force component:             0.474677E-02
+Averaged force norm:                 0.296343E-02
+Maximal Lattice force component:     0.405846E-01 au
+Averaged lattice force norm:         0.336190E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 65, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10690829E+03    0.00000000E+00    0.14965366E-01
+    2   -0.10686765E+03    0.40646556E-01    0.10659843E-01
+    3   -0.10686804E+03   -0.39219975E-03    0.49914423E-02
+    4   -0.10686809E+03   -0.47974048E-04    0.77009523E-03
+
+Total Energy:                     -104.4889277010 H        -2843.2884 eV
+Extrapolated to 0K:               -104.4889277010 H        -2843.2884 eV
+Total Mermin free energy:         -104.4889277010 H        -2843.2884 eV
+Force related energy:             -104.4889277010 H        -2843.2884 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.105407E-03 au     0.310117E+10 Pa
+Maximal force component:             0.180607E-01
+Averaged force norm:                 0.905951E-02
+Maximal Lattice force component:     0.367366E-01 au
+Averaged lattice force norm:         0.305687E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 66, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10686810E+03    0.00000000E+00    0.13017960E-01
+    2   -0.10690280E+03   -0.34705616E-01    0.91430584E-02
+    3   -0.10690308E+03   -0.27463223E-03    0.40170605E-02
+    4   -0.10690311E+03   -0.36419304E-04    0.63995478E-03
+
+Total Energy:                     -104.4913895733 H        -2843.3554 eV
+Extrapolated to 0K:               -104.4913895733 H        -2843.3554 eV
+Total Mermin free energy:         -104.4913895733 H        -2843.3554 eV
+Force related energy:             -104.4913895733 H        -2843.3554 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.114254E-03 au     0.336146E+10 Pa
+Maximal force component:             0.651654E-02
+Averaged force norm:                 0.344562E-02
+Maximal Lattice force component:     0.399126E-01 au
+Averaged lattice force norm:         0.330846E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 67, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10690312E+03    0.00000000E+00    0.13275373E-01
+    2   -0.10688623E+03    0.16884359E-01    0.82825139E-02
+    3   -0.10688638E+03   -0.15068234E-03    0.38998032E-02
+    4   -0.10688642E+03   -0.38604679E-04    0.12209058E-02
+    5   -0.10688643E+03   -0.27370261E-05    0.13055350E-03
+
+Total Energy:                     -104.4920971389 H        -2843.3746 eV
+Extrapolated to 0K:               -104.4920971389 H        -2843.3746 eV
+Total Mermin free energy:         -104.4920971389 H        -2843.3746 eV
+Force related energy:             -104.4920971389 H        -2843.3746 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.109979E-03 au     0.323570E+10 Pa
+Maximal force component:             0.995495E-02
+Averaged force norm:                 0.461730E-02
+Maximal Lattice force component:     0.384219E-01 au
+Averaged lattice force norm:         0.318457E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 68, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10688643E+03    0.00000000E+00    0.44257970E-02
+    2   -0.10689195E+03   -0.55265155E-02    0.26676924E-02
+    3   -0.10689197E+03   -0.15442069E-04    0.11838751E-02
+    4   -0.10689197E+03   -0.42009240E-05    0.37569450E-03
+
+Total Energy:                     -104.4922993332 H        -2843.3801 eV
+Extrapolated to 0K:               -104.4922993332 H        -2843.3801 eV
+Total Mermin free energy:         -104.4922993332 H        -2843.3801 eV
+Force related energy:             -104.4922993332 H        -2843.3801 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.111434E-03 au     0.327849E+10 Pa
+Maximal force component:             0.639990E-02
+Averaged force norm:                 0.291184E-02
+Maximal Lattice force component:     0.389302E-01 au
+Averaged lattice force norm:         0.322669E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 69, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10689197E+03    0.00000000E+00    0.63180523E-02
+    2   -0.10685893E+03    0.33037752E-01    0.42358731E-02
+    3   -0.10685894E+03   -0.65004958E-05    0.12082894E-02
+    4   -0.10685894E+03   -0.32750560E-05    0.29098477E-03
+
+Total Energy:                     -104.4928393281 H        -2843.3948 eV
+Extrapolated to 0K:               -104.4928393281 H        -2843.3948 eV
+Total Mermin free energy:         -104.4928393281 H        -2843.3948 eV
+Force related energy:             -104.4928393281 H        -2843.3948 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.104156E-03 au     0.306439E+10 Pa
+Maximal force component:             0.605746E-02
+Averaged force norm:                 0.322749E-02
+Maximal Lattice force component:     0.363372E-01 au
+Averaged lattice force norm:         0.301847E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 70, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10685894E+03    0.00000000E+00    0.10677016E-02
+    2   -0.10686514E+03   -0.61988169E-02    0.73205751E-03
+
+Total Energy:                     -104.4928687223 H        -2843.3956 eV
+Extrapolated to 0K:               -104.4928687223 H        -2843.3956 eV
+Total Mermin free energy:         -104.4928687223 H        -2843.3956 eV
+Force related energy:             -104.4928687223 H        -2843.3956 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.105520E-03 au     0.310450E+10 Pa
+Maximal force component:             0.457680E-02
+Averaged force norm:                 0.258147E-02
+Maximal Lattice force component:     0.368230E-01 au
+Averaged lattice force norm:         0.305744E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 71, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10686514E+03    0.00000000E+00    0.62249934E-02
+    2   -0.10684697E+03    0.18178778E-01    0.25752528E-02
+    3   -0.10684706E+03   -0.90641997E-04    0.16091652E-02
+    4   -0.10684706E+03   -0.62997621E-05    0.31303715E-03
+
+Total Energy:                     -104.4933422231 H        -2843.4085 eV
+Extrapolated to 0K:               -104.4933422231 H        -2843.4085 eV
+Total Mermin free energy:         -104.4933422231 H        -2843.4085 eV
+Force related energy:             -104.4933422231 H        -2843.4085 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.100526E-03 au     0.295759E+10 Pa
+Maximal force component:             0.379382E-02
+Averaged force norm:                 0.230483E-02
+Maximal Lattice force component:     0.350391E-01 au
+Averaged lattice force norm:         0.291512E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 72, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10684706E+03    0.00000000E+00    0.91856966E-02
+    2   -0.10681725E+03    0.29817547E-01    0.44605398E-02
+    3   -0.10681748E+03   -0.23953770E-03    0.28205306E-02
+    4   -0.10681750E+03   -0.16491109E-04    0.55815607E-03
+
+Total Energy:                     -104.4922849265 H        -2843.3797 eV
+Extrapolated to 0K:               -104.4922849265 H        -2843.3797 eV
+Total Mermin free energy:         -104.4922849265 H        -2843.3797 eV
+Force related energy:             -104.4922849265 H        -2843.3797 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.927222E-04 au     0.272798E+10 Pa
+Maximal force component:             0.153211E-01
+Averaged force norm:                 0.708022E-02
+Maximal Lattice force component:     0.322507E-01 au
+Averaged lattice force norm:         0.269343E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 73, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10681750E+03    0.00000000E+00    0.83198700E-02
+    2   -0.10684592E+03   -0.28416218E-01    0.41266756E-02
+    3   -0.10684614E+03   -0.22509161E-03    0.25122263E-02
+    4   -0.10684616E+03   -0.16120458E-04    0.41657971E-03
+
+Total Energy:                     -104.4933431975 H        -2843.4085 eV
+Extrapolated to 0K:               -104.4933431975 H        -2843.4085 eV
+Total Mermin free energy:         -104.4933431975 H        -2843.4085 eV
+Force related energy:             -104.4933431975 H        -2843.4085 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.100120E-03 au     0.294564E+10 Pa
+Maximal force component:             0.400651E-02
+Averaged force norm:                 0.241622E-02
+Maximal Lattice force component:     0.348937E-01 au
+Averaged lattice force norm:         0.290357E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 74, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10684616E+03    0.00000000E+00    0.74740549E-02
+    2   -0.10684382E+03    0.23401690E-02    0.48755702E-02
+    3   -0.10684387E+03   -0.49350924E-04    0.14784796E-02
+    4   -0.10684388E+03   -0.97997899E-05    0.35334361E-03
+
+Total Energy:                     -104.4937279722 H        -2843.4190 eV
+Extrapolated to 0K:               -104.4937279722 H        -2843.4190 eV
+Total Mermin free energy:         -104.4937279722 H        -2843.4190 eV
+Force related energy:             -104.4937279722 H        -2843.4190 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.985607E-04 au     0.289976E+10 Pa
+Maximal force component:             0.300779E-02
+Averaged force norm:                 0.191138E-02
+Maximal Lattice force component:     0.343541E-01 au
+Averaged lattice force norm:         0.285808E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 75, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10684388E+03    0.00000000E+00    0.32796462E-03
+
+Total Energy:                     -104.4937289784 H        -2843.4190 eV
+Extrapolated to 0K:               -104.4937289784 H        -2843.4190 eV
+Total Mermin free energy:         -104.4937289784 H        -2843.4190 eV
+Force related energy:             -104.4937289784 H        -2843.4190 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.986180E-04 au     0.290144E+10 Pa
+Maximal force component:             0.274840E-02
+Averaged force norm:                 0.182418E-02
+Maximal Lattice force component:     0.343730E-01 au
+Averaged lattice force norm:         0.285981E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 76, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10684401E+03    0.00000000E+00    0.25236894E-02
+    2   -0.10685452E+03   -0.10513754E-01    0.16283960E-02
+    3   -0.10685453E+03   -0.52472998E-05    0.60114320E-03
+
+Total Energy:                     -104.4939895068 H        -2843.4261 eV
+Extrapolated to 0K:               -104.4939895068 H        -2843.4261 eV
+Total Mermin free energy:         -104.4939895068 H        -2843.4261 eV
+Force related energy:             -104.4939895068 H        -2843.4261 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.101198E-03 au     0.297735E+10 Pa
+Maximal force component:             0.341508E-02
+Averaged force norm:                 0.202786E-02
+Maximal Lattice force component:     0.352945E-01 au
+Averaged lattice force norm:         0.293331E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 77, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10685453E+03    0.00000000E+00    0.32955717E-03
+
+Total Energy:                     -104.4939960825 H        -2843.4263 eV
+Extrapolated to 0K:               -104.4939960825 H        -2843.4263 eV
+Total Mermin free energy:         -104.4939960825 H        -2843.4263 eV
+Force related energy:             -104.4939960825 H        -2843.4263 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.100750E-03 au     0.296416E+10 Pa
+Maximal force component:             0.293858E-02
+Averaged force norm:                 0.172755E-02
+Maximal Lattice force component:     0.351343E-01 au
+Averaged lattice force norm:         0.292053E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 78, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10685310E+03    0.00000000E+00    0.23155160E-02
+    2   -0.10685216E+03    0.93807248E-03    0.15397796E-02
+    3   -0.10685216E+03   -0.16519764E-05    0.37606709E-03
+
+Total Energy:                     -104.4941950548 H        -2843.4317 eV
+Extrapolated to 0K:               -104.4941950548 H        -2843.4317 eV
+Total Mermin free energy:         -104.4941950548 H        -2843.4317 eV
+Force related energy:             -104.4941950548 H        -2843.4317 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.101899E-03 au     0.299796E+10 Pa
+Maximal force component:             0.198203E-02
+Averaged force norm:                 0.124195E-02
+Maximal Lattice force component:     0.355426E-01 au
+Averaged lattice force norm:         0.295342E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 79, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10685216E+03    0.00000000E+00    0.52783678E-03
+
+Total Energy:                     -104.4941992221 H        -2843.4318 eV
+Extrapolated to 0K:               -104.4941992221 H        -2843.4318 eV
+Total Mermin free energy:         -104.4941992221 H        -2843.4318 eV
+Force related energy:             -104.4941992221 H        -2843.4318 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.101774E-03 au     0.299430E+10 Pa
+Maximal force component:             0.186743E-02
+Averaged force norm:                 0.105297E-02
+Maximal Lattice force component:     0.354988E-01 au
+Averaged lattice force norm:         0.294984E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 80, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10685229E+03    0.00000000E+00    0.19073024E-02
+    2   -0.10686643E+03   -0.14141261E-01    0.14030774E-02
+    3   -0.10686645E+03   -0.16019909E-04    0.82862337E-03
+
+Total Energy:                     -104.4942540619 H        -2843.4333 eV
+Extrapolated to 0K:               -104.4942540619 H        -2843.4333 eV
+Total Mermin free energy:         -104.4942540619 H        -2843.4333 eV
+Force related energy:             -104.4942540619 H        -2843.4333 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.105862E-03 au     0.311457E+10 Pa
+Maximal force component:             0.284508E-02
+Averaged force norm:                 0.163891E-02
+Maximal Lattice force component:     0.369576E-01 au
+Averaged lattice force norm:         0.306654E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 81, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10686645E+03    0.00000000E+00    0.74458450E-03
+
+Total Energy:                     -104.4942891290 H        -2843.4343 eV
+Extrapolated to 0K:               -104.4942891290 H        -2843.4343 eV
+Total Mermin free energy:         -104.4942891290 H        -2843.4343 eV
+Force related energy:             -104.4942891290 H        -2843.4343 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.104443E-03 au     0.307281E+10 Pa
+Maximal force component:             0.162978E-02
+Averaged force norm:                 0.962891E-03
+Maximal Lattice force component:     0.364499E-01 au
+Averaged lattice force norm:         0.302607E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 82, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10686100E+03    0.00000000E+00    0.22278007E-02
+    2   -0.10686386E+03   -0.28658876E-02    0.16416995E-02
+    3   -0.10686388E+03   -0.16136640E-04    0.92325528E-03
+
+Total Energy:                     -104.4943282894 H        -2843.4353 eV
+Extrapolated to 0K:               -104.4943282894 H        -2843.4353 eV
+Total Mermin free energy:         -104.4943282894 H        -2843.4353 eV
+Force related energy:             -104.4943282894 H        -2843.4353 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.105512E-03 au     0.310426E+10 Pa
+Maximal force component:             0.184357E-02
+Averaged force norm:                 0.961551E-03
+Maximal Lattice force component:     0.368278E-01 au
+Averaged lattice force norm:         0.305683E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 83, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10686388E+03    0.00000000E+00    0.54544979E-03
+
+Total Energy:                     -104.4943380291 H        -2843.4356 eV
+Extrapolated to 0K:               -104.4943380291 H        -2843.4356 eV
+Total Mermin free energy:         -104.4943380291 H        -2843.4356 eV
+Force related energy:             -104.4943380291 H        -2843.4356 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.105102E-03 au     0.309221E+10 Pa
+Maximal force component:             0.122479E-02
+Averaged force norm:                 0.660626E-03
+Maximal Lattice force component:     0.366838E-01 au
+Averaged lattice force norm:         0.304499E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 84, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10686301E+03    0.00000000E+00    0.24312151E-02
+    2   -0.10686253E+03    0.47889159E-03    0.12691045E-02
+    3   -0.10686254E+03   -0.96303194E-05    0.55653002E-03
+
+Total Energy:                     -104.4943462705 H        -2843.4358 eV
+Extrapolated to 0K:               -104.4943462705 H        -2843.4358 eV
+Total Mermin free energy:         -104.4943462705 H        -2843.4358 eV
+Force related energy:             -104.4943462705 H        -2843.4358 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.105501E-03 au     0.310393E+10 Pa
+Maximal force component:             0.218620E-02
+Averaged force norm:                 0.100614E-02
+Maximal Lattice force component:     0.368279E-01 au
+Averaged lattice force norm:         0.305623E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 85, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10686254E+03    0.00000000E+00    0.53972846E-03
+
+Total Energy:                     -104.4943582652 H        -2843.4362 eV
+Extrapolated to 0K:               -104.4943582652 H        -2843.4362 eV
+Total Mermin free energy:         -104.4943582652 H        -2843.4362 eV
+Force related energy:             -104.4943582652 H        -2843.4362 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.105460E-03 au     0.310273E+10 Pa
+Maximal force component:             0.101956E-02
+Averaged force norm:                 0.558670E-03
+Maximal Lattice force component:     0.368114E-01 au
+Averaged lattice force norm:         0.305520E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 86, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10686275E+03    0.00000000E+00    0.15551351E-02
+    2   -0.10686285E+03   -0.10136384E-03    0.65061668E-03
+
+Total Energy:                     -104.4943780410 H        -2843.4367 eV
+Extrapolated to 0K:               -104.4943780410 H        -2843.4367 eV
+Total Mermin free energy:         -104.4943780410 H        -2843.4367 eV
+Force related energy:             -104.4943780410 H        -2843.4367 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.105368E-03 au     0.310002E+10 Pa
+Maximal force component:             0.643184E-03
+Averaged force norm:                 0.420503E-03
+Maximal Lattice force component:     0.367789E-01 au
+Averaged lattice force norm:         0.305256E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 87, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10686286E+03    0.00000000E+00    0.26731579E-02
+    2   -0.10686299E+03   -0.13024456E-03    0.13393389E-02
+    3   -0.10686300E+03   -0.77247715E-05    0.42298834E-03
+
+Total Energy:                     -104.4943513101 H        -2843.4360 eV
+Extrapolated to 0K:               -104.4943513101 H        -2843.4360 eV
+Total Mermin free energy:         -104.4943513101 H        -2843.4360 eV
+Force related energy:             -104.4943513101 H        -2843.4360 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.105434E-03 au     0.310197E+10 Pa
+Maximal force component:             0.213833E-02
+Averaged force norm:                 0.112427E-02
+Maximal Lattice force component:     0.368035E-01 au
+Averaged lattice force norm:         0.305444E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 88, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10686300E+03    0.00000000E+00    0.13030622E-02
+    2   -0.10686288E+03    0.11940738E-03    0.58413551E-03
+
+Total Energy:                     -104.4943786888 H        -2843.4367 eV
+Extrapolated to 0K:               -104.4943786888 H        -2843.4367 eV
+Total Mermin free energy:         -104.4943786888 H        -2843.4367 eV
+Force related energy:             -104.4943786888 H        -2843.4367 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.105457E-03 au     0.310264E+10 Pa
+Maximal force component:             0.828536E-03
+Averaged force norm:                 0.522148E-03
+Maximal Lattice force component:     0.368119E-01 au
+Averaged lattice force norm:         0.305505E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 89, Lattice step: 1
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10686288E+03    0.00000000E+00    0.58413551E-03
+
+Total Energy:                     -104.4943786888 H        -2843.4367 eV
+Extrapolated to 0K:               -104.4943786888 H        -2843.4367 eV
+Total Mermin free energy:         -104.4943786888 H        -2843.4367 eV
+Force related energy:             -104.4943786888 H        -2843.4367 eV
+
+Volume:                              0.990022E+04 au^3   0.146706E+04 A^3
+Pressure:                            0.105457E-03 au     0.310264E+10 Pa
+Maximal force component:             0.828536E-03
+Averaged force norm:                 0.522148E-03
+Maximal Lattice force component:     0.368119E-01 au
+Averaged lattice force norm:         0.305505E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 90, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10686288E+03    0.00000000E+00    0.46817051E-01
+    2   -0.10585656E+03    0.10063235E+01    0.26994627E-01
+    3   -0.10585721E+03   -0.65576960E-03    0.49630456E-02
+    4   -0.10585742E+03   -0.20988112E-03    0.18351989E-02
+    5   -0.10585743E+03   -0.68664509E-05    0.36426358E-03
+
+Total Energy:                     -104.4376842853 H        -2841.8940 eV
+Extrapolated to 0K:               -104.4376842853 H        -2841.8940 eV
+Total Mermin free energy:         -104.4376842853 H        -2841.8940 eV
+Force related energy:             -104.4376842853 H        -2841.8940 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.181300E-03 au    -0.533402E+10 Pa
+Maximal force component:             0.614964E-01
+Averaged force norm:                 0.276371E-01
+Maximal Lattice force component:     0.682213E-01 au
+Averaged lattice force norm:         0.557283E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 91, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10585743E+03    0.00000000E+00    0.16029987E+00
+    2   -0.10669955E+03   -0.84211397E+00    0.10752204E+00
+    3   -0.10670811E+03   -0.85646273E-02    0.29554387E-01
+    4   -0.10671191E+03   -0.37992544E-02    0.94623037E-02
+    5   -0.10671217E+03   -0.26488080E-03    0.27635653E-02
+    6   -0.10671221E+03   -0.33085662E-04    0.15930144E-02
+    7   -0.10671221E+03   -0.14879591E-05    0.36730679E-03
+
+Total Energy:                     -104.4294673876 H        -2841.6704 eV
+Extrapolated to 0K:               -104.4294673876 H        -2841.6704 eV
+Total Mermin free energy:         -104.4294673876 H        -2841.6704 eV
+Force related energy:             -104.4294673876 H        -2841.6704 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.575432E-06 au    -0.169298E+08 Pa
+Maximal force component:             0.148431E+00
+Averaged force norm:                 0.651983E-01
+Maximal Lattice force component:     0.567789E-02 au
+Averaged lattice force norm:         0.328323E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 92, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10671221E+03    0.00000000E+00    0.11195330E+00
+    2   -0.10618618E+03    0.52602803E+00    0.70300621E-01
+    3   -0.10618988E+03   -0.36941743E-02    0.14992697E-01
+    4   -0.10619156E+03   -0.16874515E-02    0.54719556E-02
+    5   -0.10619163E+03   -0.64530043E-04    0.20382275E-02
+    6   -0.10619164E+03   -0.12302050E-04    0.73631065E-03
+
+Total Energy:                     -104.4849009097 H        -2843.1788 eV
+Extrapolated to 0K:               -104.4849009097 H        -2843.1788 eV
+Total Mermin free energy:         -104.4849009097 H        -2843.1788 eV
+Force related energy:             -104.4849009097 H        -2843.1788 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.117552E-03 au    -0.345849E+10 Pa
+Maximal force component:             0.287080E-01
+Averaged force norm:                 0.176716E-01
+Maximal Lattice force component:     0.440604E-01 au
+Averaged lattice force norm:         0.360560E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 93, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10619164E+03    0.00000000E+00    0.31543983E-01
+    2   -0.10632701E+03   -0.13536876E+00    0.19641891E-01
+    3   -0.10632725E+03   -0.24134958E-03    0.62807951E-02
+    4   -0.10632732E+03   -0.69940156E-04    0.18800660E-02
+    5   -0.10632733E+03   -0.47222154E-05    0.30155448E-03
+
+Total Energy:                     -104.5188533804 H        -2844.1027 eV
+Extrapolated to 0K:               -104.5188533804 H        -2844.1027 eV
+Total Mermin free energy:         -104.5188533804 H        -2844.1027 eV
+Force related energy:             -104.5188533804 H        -2844.1027 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.841973E-04 au    -0.247717E+10 Pa
+Maximal force component:             0.160221E-01
+Averaged force norm:                 0.120056E-01
+Maximal Lattice force component:     0.314903E-01 au
+Averaged lattice force norm:         0.258090E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 94, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10632733E+03    0.00000000E+00    0.51295990E-01
+    2   -0.10654572E+03   -0.21839417E+00    0.32450472E-01
+    3   -0.10654630E+03   -0.57755112E-03    0.10645427E-01
+    4   -0.10654644E+03   -0.14372359E-03    0.29778327E-02
+    5   -0.10654646E+03   -0.15343264E-04    0.46988633E-03
+
+Total Energy:                     -104.5185648085 H        -2844.0949 eV
+Extrapolated to 0K:               -104.5185648085 H        -2844.0949 eV
+Total Mermin free energy:         -104.5185648085 H        -2844.0949 eV
+Force related energy:             -104.5185648085 H        -2844.0949 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.233723E-04 au    -0.687635E+09 Pa
+Maximal force component:             0.495954E-01
+Averaged force norm:                 0.291717E-01
+Maximal Lattice force component:     0.856232E-02 au
+Averaged lattice force norm:         0.726047E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 95, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10654646E+03    0.00000000E+00    0.27239009E-01
+    2   -0.10643419E+03    0.11227243E+00    0.16742960E-01
+    3   -0.10643436E+03   -0.17297767E-03    0.57177541E-02
+    4   -0.10643440E+03   -0.37068341E-04    0.15961532E-02
+    5   -0.10643441E+03   -0.40156471E-05    0.24209449E-03
+
+Total Energy:                     -104.5275389394 H        -2844.3391 eV
+Extrapolated to 0K:               -104.5275389394 H        -2844.3391 eV
+Total Mermin free energy:         -104.5275389394 H        -2844.3391 eV
+Force related energy:             -104.5275389394 H        -2844.3391 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.555813E-04 au    -0.163526E+10 Pa
+Maximal force component:             0.308965E-01
+Averaged force norm:                 0.181348E-01
+Maximal Lattice force component:     0.207044E-01 au
+Averaged lattice force norm:         0.170351E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 96, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10643441E+03    0.00000000E+00    0.79321265E-01
+    2   -0.10680480E+03   -0.37039041E+00    0.43737693E-01
+    3   -0.10680962E+03   -0.48201334E-02    0.14856862E-01
+    4   -0.10681004E+03   -0.42426339E-03    0.36865011E-02
+    5   -0.10681011E+03   -0.66929147E-04    0.54772637E-03
+
+Total Energy:                     -104.5322259499 H        -2844.4666 eV
+Extrapolated to 0K:               -104.5322259499 H        -2844.4666 eV
+Total Mermin free energy:         -104.5322259499 H        -2844.4666 eV
+Force related energy:             -104.5322259499 H        -2844.4666 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                            0.345409E-04 au     0.101623E+10 Pa
+Maximal force component:             0.436385E-01
+Averaged force norm:                 0.179651E-01
+Maximal Lattice force component:     0.132562E-01 au
+Averaged lattice force norm:         0.109384E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 97, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10681011E+03    0.00000000E+00    0.37733184E-01
+    2   -0.10663319E+03    0.17692139E+00    0.20727316E-01
+    3   -0.10663425E+03   -0.10578421E-02    0.69531415E-02
+    4   -0.10663435E+03   -0.97835154E-04    0.18096470E-02
+    5   -0.10663436E+03   -0.14085081E-04    0.21015438E-03
+
+Total Energy:                     -104.5425600240 H        -2844.7478 eV
+Extrapolated to 0K:               -104.5425600240 H        -2844.7478 eV
+Total Mermin free energy:         -104.5425600240 H        -2844.7478 eV
+Force related energy:             -104.5425600240 H        -2844.7478 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.997298E-05 au    -0.293415E+09 Pa
+Maximal force component:             0.127590E-01
+Averaged force norm:                 0.562301E-02
+Maximal Lattice force component:     0.351796E-02 au
+Averaged lattice force norm:         0.341484E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 98, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10663436E+03    0.00000000E+00    0.21183548E-01
+    2   -0.10662635E+03    0.80153350E-02    0.12812927E-01
+    3   -0.10662794E+03   -0.15885573E-02    0.86469483E-02
+    4   -0.10662802E+03   -0.79644693E-04    0.93120804E-03
+
+Total Energy:                     -104.5305877036 H        -2844.4220 eV
+Extrapolated to 0K:               -104.5305877036 H        -2844.4220 eV
+Total Mermin free energy:         -104.5305877036 H        -2844.4220 eV
+Force related energy:             -104.5305877036 H        -2844.4220 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.498437E-05 au    -0.146645E+09 Pa
+Maximal force component:             0.428724E-01
+Averaged force norm:                 0.212244E-01
+Maximal Lattice force component:     0.345413E-02 au
+Averaged lattice force norm:         0.239011E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 99, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10662803E+03    0.00000000E+00    0.15188589E-01
+    2   -0.10663255E+03   -0.45196737E-02    0.92985246E-02
+    3   -0.10663336E+03   -0.81623255E-03    0.63727219E-02
+    4   -0.10663341E+03   -0.44524186E-04    0.10244629E-02
+    5   -0.10663341E+03   -0.57151529E-05    0.18328349E-03
+
+Total Energy:                     -104.5445297084 H        -2844.8014 eV
+Extrapolated to 0K:               -104.5445297084 H        -2844.8014 eV
+Total Mermin free energy:         -104.5445297084 H        -2844.8014 eV
+Force related energy:             -104.5445297084 H        -2844.8014 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.912550E-05 au    -0.268481E+09 Pa
+Maximal force component:             0.759634E-02
+Averaged force norm:                 0.414614E-02
+Maximal Lattice force component:     0.327429E-02 au
+Averaged lattice force norm:         0.321910E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 100, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10663341E+03    0.00000000E+00    0.59890606E-02
+    2   -0.10662154E+03    0.11870984E-01    0.37468342E-02
+    3   -0.10662155E+03   -0.97793220E-05    0.63469083E-03
+
+Total Energy:                     -104.5456912965 H        -2844.8330 eV
+Extrapolated to 0K:               -104.5456912965 H        -2844.8330 eV
+Total Mermin free energy:         -104.5456912965 H        -2844.8330 eV
+Force related energy:             -104.5456912965 H        -2844.8330 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.107276E-04 au    -0.315615E+09 Pa
+Maximal force component:             0.450683E-02
+Averaged force norm:                 0.273538E-02
+Maximal Lattice force component:     0.380252E-02 au
+Averaged lattice force norm:         0.361323E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 101, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10662156E+03    0.00000000E+00    0.61582649E-03
+
+Total Energy:                     -104.5456913072 H        -2844.8330 eV
+Extrapolated to 0K:               -104.5456913072 H        -2844.8330 eV
+Total Mermin free energy:         -104.5456913072 H        -2844.8330 eV
+Force related energy:             -104.5456913072 H        -2844.8330 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.107196E-04 au    -0.315383E+09 Pa
+Maximal force component:             0.448133E-02
+Averaged force norm:                 0.272474E-02
+Maximal Lattice force component:     0.379949E-02 au
+Averaged lattice force norm:         0.361127E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 102, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10662161E+03    0.00000000E+00    0.39300766E-02
+    2   -0.10662616E+03   -0.45530016E-02    0.19519814E-02
+    3   -0.10662618E+03   -0.17085222E-04    0.10747369E-02
+    4   -0.10662618E+03   -0.31544462E-05    0.67143397E-03
+
+Total Energy:                     -104.5464418305 H        -2844.8534 eV
+Extrapolated to 0K:               -104.5464418305 H        -2844.8534 eV
+Total Mermin free energy:         -104.5464418305 H        -2844.8534 eV
+Force related energy:             -104.5464418305 H        -2844.8534 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.944679E-05 au    -0.277934E+09 Pa
+Maximal force component:             0.429985E-02
+Averaged force norm:                 0.271328E-02
+Maximal Lattice force component:     0.332180E-02 au
+Averaged lattice force norm:         0.326892E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 103, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10662618E+03    0.00000000E+00    0.67841028E-03
+
+Total Energy:                     -104.5464418776 H        -2844.8534 eV
+Extrapolated to 0K:               -104.5464418776 H        -2844.8534 eV
+Total Mermin free energy:         -104.5464418776 H        -2844.8534 eV
+Force related energy:             -104.5464418776 H        -2844.8534 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.945023E-05 au    -0.278035E+09 Pa
+Maximal force component:             0.422448E-02
+Averaged force norm:                 0.268244E-02
+Maximal Lattice force component:     0.332303E-02 au
+Averaged lattice force norm:         0.326999E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 104, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10662613E+03    0.00000000E+00    0.46301798E-02
+    2   -0.10665146E+03   -0.25325786E-01    0.34495853E-02
+    3   -0.10665147E+03   -0.10388380E-04    0.65924983E-03
+
+Total Energy:                     -104.5468079710 H        -2844.8634 eV
+Extrapolated to 0K:               -104.5468079710 H        -2844.8634 eV
+Total Mermin free energy:         -104.5468079710 H        -2844.8634 eV
+Force related energy:             -104.5468079710 H        -2844.8634 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.414973E-05 au    -0.122089E+09 Pa
+Maximal force component:             0.396221E-02
+Averaged force norm:                 0.240414E-02
+Maximal Lattice force component:     0.321224E-02 au
+Averaged lattice force norm:         0.214386E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 105, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10665148E+03    0.00000000E+00    0.15065055E-02
+    2   -0.10664453E+03    0.69433204E-02    0.94781142E-03
+
+Total Energy:                     -104.5468660008 H        -2844.8650 eV
+Extrapolated to 0K:               -104.5468660008 H        -2844.8650 eV
+Total Mermin free energy:         -104.5468660008 H        -2844.8650 eV
+Force related energy:             -104.5468660008 H        -2844.8650 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.558370E-05 au    -0.164278E+09 Pa
+Maximal force component:             0.274819E-02
+Averaged force norm:                 0.160190E-02
+Maximal Lattice force component:     0.319122E-02 au
+Averaged lattice force norm:         0.238781E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 106, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10664454E+03    0.00000000E+00    0.40712816E-02
+    2   -0.10664779E+03   -0.32556343E-02    0.28138151E-02
+    3   -0.10664780E+03   -0.46639338E-05    0.72583260E-03
+
+Total Energy:                     -104.5471664774 H        -2844.8731 eV
+Extrapolated to 0K:               -104.5471664774 H        -2844.8731 eV
+Total Mermin free energy:         -104.5471664774 H        -2844.8731 eV
+Force related energy:             -104.5471664774 H        -2844.8731 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.412148E-05 au    -0.121258E+09 Pa
+Maximal force component:             0.264383E-02
+Averaged force norm:                 0.159012E-02
+Maximal Lattice force component:     0.314610E-02 au
+Averaged lattice force norm:         0.210861E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 107, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10664780E+03    0.00000000E+00    0.60092775E-02
+    2   -0.10665280E+03   -0.49974634E-02    0.42380649E-02
+    3   -0.10665280E+03   -0.87888004E-05    0.10188177E-02
+    4   -0.10665281E+03   -0.44325142E-05    0.95368510E-04
+
+Total Energy:                     -104.5464942363 H        -2844.8549 eV
+Extrapolated to 0K:               -104.5464942363 H        -2844.8549 eV
+Total Mermin free energy:         -104.5464942363 H        -2844.8549 eV
+Force related energy:             -104.5464942363 H        -2844.8549 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.174811E-05 au    -0.514312E+08 Pa
+Maximal force component:             0.108030E-01
+Averaged force norm:                 0.484056E-02
+Maximal Lattice force component:     0.304402E-02 au
+Averaged lattice force norm:         0.179115E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 108, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10665281E+03    0.00000000E+00    0.51568605E-02
+    2   -0.10664795E+03    0.48612070E-02    0.36259836E-02
+    3   -0.10664796E+03   -0.92859370E-05    0.95169452E-03
+
+Total Energy:                     -104.5471672054 H        -2844.8732 eV
+Extrapolated to 0K:               -104.5471672054 H        -2844.8732 eV
+Total Mermin free energy:         -104.5471672054 H        -2844.8732 eV
+Force related energy:             -104.5471672054 H        -2844.8732 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.432882E-05 au    -0.127358E+09 Pa
+Maximal force component:             0.288507E-02
+Averaged force norm:                 0.167322E-02
+Maximal Lattice force component:     0.313131E-02 au
+Averaged lattice force norm:         0.213505E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 109, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10664796E+03    0.00000000E+00    0.45042108E-02
+    2   -0.10666661E+03   -0.18647314E-01    0.27296070E-02
+    3   -0.10666661E+03   -0.50991814E-05    0.91995450E-03
+
+Total Energy:                     -104.5473520562 H        -2844.8782 eV
+Extrapolated to 0K:               -104.5473520562 H        -2844.8782 eV
+Total Mermin free energy:         -104.5473520562 H        -2844.8782 eV
+Force related energy:             -104.5473520562 H        -2844.8782 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.233935E-06 au    -0.688259E+07 Pa
+Maximal force component:             0.336944E-02
+Averaged force norm:                 0.199380E-02
+Maximal Lattice force component:     0.313091E-02 au
+Averaged lattice force norm:         0.181206E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 110, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10666661E+03    0.00000000E+00    0.56396628E-03
+
+Total Energy:                     -104.5473655343 H        -2844.8786 eV
+Extrapolated to 0K:               -104.5473655343 H        -2844.8786 eV
+Total Mermin free energy:         -104.5473655343 H        -2844.8786 eV
+Force related energy:             -104.5473655343 H        -2844.8786 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.117086E-05 au    -0.344480E+08 Pa
+Maximal force component:             0.312468E-02
+Averaged force norm:                 0.154667E-02
+Maximal Lattice force component:     0.313463E-02 au
+Averaged lattice force norm:         0.181701E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 111, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10666275E+03    0.00000000E+00    0.31509954E-02
+    2   -0.10666682E+03   -0.40747904E-02    0.14515402E-02
+    3   -0.10666684E+03   -0.18401366E-04    0.58095910E-03
+
+Total Energy:                     -104.5475403629 H        -2844.8833 eV
+Extrapolated to 0K:               -104.5475403629 H        -2844.8833 eV
+Total Mermin free energy:         -104.5475403629 H        -2844.8833 eV
+Force related energy:             -104.5475403629 H        -2844.8833 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                            0.129900E-06 au     0.382178E+07 Pa
+Maximal force component:             0.161239E-02
+Averaged force norm:                 0.101454E-02
+Maximal Lattice force component:     0.315519E-02 au
+Averaged lattice force norm:         0.183744E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 112, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10666684E+03    0.00000000E+00    0.55279438E-02
+    2   -0.10667313E+03   -0.62920719E-02    0.28463793E-02
+    3   -0.10667316E+03   -0.29526183E-04    0.12170045E-02
+    4   -0.10667316E+03   -0.30187789E-05    0.39556986E-03
+
+Total Energy:                     -104.5471531013 H        -2844.8728 eV
+Extrapolated to 0K:               -104.5471531013 H        -2844.8728 eV
+Total Mermin free energy:         -104.5471531013 H        -2844.8728 eV
+Force related energy:             -104.5471531013 H        -2844.8728 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                            0.163341E-05 au     0.480566E+08 Pa
+Maximal force component:             0.618609E-02
+Averaged force norm:                 0.344227E-02
+Maximal Lattice force component:     0.318400E-02 au
+Averaged lattice force norm:         0.196909E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 113, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10667317E+03    0.00000000E+00    0.50613867E-02
+    2   -0.10666702E+03    0.61412173E-02    0.25374286E-02
+    3   -0.10666705E+03   -0.28395738E-04    0.79459280E-03
+
+Total Energy:                     -104.5475405408 H        -2844.8833 eV
+Extrapolated to 0K:               -104.5475405408 H        -2844.8833 eV
+Total Mermin free energy:         -104.5475405408 H        -2844.8833 eV
+Force related energy:             -104.5475405408 H        -2844.8833 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.138566E-06 au    -0.407674E+07 Pa
+Maximal force component:             0.171840E-02
+Averaged force norm:                 0.106864E-02
+Maximal Lattice force component:     0.314940E-02 au
+Averaged lattice force norm:         0.182509E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 114, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10666706E+03    0.00000000E+00    0.71703150E-02
+    2   -0.10665809E+03    0.89692739E-02    0.39367761E-02
+    3   -0.10665812E+03   -0.33768185E-04    0.11034076E-02
+    4   -0.10665813E+03   -0.56805750E-05    0.48293228E-03
+
+Total Energy:                     -104.5476207885 H        -2844.8855 eV
+Extrapolated to 0K:               -104.5476207885 H        -2844.8855 eV
+Total Mermin free energy:         -104.5476207885 H        -2844.8855 eV
+Force related energy:             -104.5476207885 H        -2844.8855 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.176186E-05 au    -0.518356E+08 Pa
+Maximal force component:             0.221943E-02
+Averaged force norm:                 0.135978E-02
+Maximal Lattice force component:     0.304451E-02 au
+Averaged lattice force norm:         0.179224E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 115, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10665813E+03    0.00000000E+00    0.18261335E-02
+    2   -0.10666086E+03   -0.27347392E-02    0.94269770E-03
+
+Total Energy:                     -104.5476394600 H        -2844.8860 eV
+Extrapolated to 0K:               -104.5476394600 H        -2844.8860 eV
+Total Mermin free energy:         -104.5476394600 H        -2844.8860 eV
+Force related energy:             -104.5476394600 H        -2844.8860 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.110634E-05 au    -0.325495E+08 Pa
+Maximal force component:             0.157277E-02
+Averaged force norm:                 0.935348E-03
+Maximal Lattice force component:     0.309493E-02 au
+Averaged lattice force norm:         0.179270E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 116, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10666086E+03    0.00000000E+00    0.34424242E-02
+    2   -0.10666275E+03   -0.18893795E-02    0.22058581E-02
+    3   -0.10666276E+03   -0.65250064E-05    0.75814401E-03
+
+Total Energy:                     -104.5476954994 H        -2844.8875 eV
+Extrapolated to 0K:               -104.5476954994 H        -2844.8875 eV
+Total Mermin free energy:         -104.5476954994 H        -2844.8875 eV
+Force related energy:             -104.5476954994 H        -2844.8875 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.132030E-05 au    -0.388446E+08 Pa
+Maximal force component:             0.156262E-02
+Averaged force norm:                 0.831651E-03
+Maximal Lattice force component:     0.312346E-02 au
+Averaged lattice force norm:         0.181537E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 117, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10666276E+03    0.00000000E+00    0.51432342E-03
+
+Total Energy:                     -104.5476997567 H        -2844.8877 eV
+Extrapolated to 0K:               -104.5476997567 H        -2844.8877 eV
+Total Mermin free energy:         -104.5476997567 H        -2844.8877 eV
+Force related energy:             -104.5476997567 H        -2844.8877 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.132445E-05 au    -0.389665E+08 Pa
+Maximal force component:             0.135615E-02
+Averaged force norm:                 0.660819E-03
+Maximal Lattice force component:     0.310314E-02 au
+Averaged lattice force norm:         0.180402E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 118, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10666237E+03    0.00000000E+00    0.11159928E-02
+    2   -0.10665701E+03    0.53541250E-02    0.64068550E-03
+
+Total Energy:                     -104.5477164203 H        -2844.8881 eV
+Extrapolated to 0K:               -104.5477164203 H        -2844.8881 eV
+Total Mermin free energy:         -104.5477164203 H        -2844.8881 eV
+Force related energy:             -104.5477164203 H        -2844.8881 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.283354E-05 au    -0.833656E+08 Pa
+Maximal force component:             0.147086E-02
+Averaged force norm:                 0.995204E-03
+Maximal Lattice force component:     0.306369E-02 au
+Averaged lattice force norm:         0.189471E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 119, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10665701E+03    0.00000000E+00    0.32623642E-03
+
+Total Energy:                     -104.5477292469 H        -2844.8885 eV
+Extrapolated to 0K:               -104.5477292469 H        -2844.8885 eV
+Total Mermin free energy:         -104.5477292469 H        -2844.8885 eV
+Force related energy:             -104.5477292469 H        -2844.8885 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.227622E-05 au    -0.669688E+08 Pa
+Maximal force component:             0.976532E-03
+Averaged force norm:                 0.564971E-03
+Maximal Lattice force component:     0.308370E-02 au
+Averaged lattice force norm:         0.185089E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 120, Lattice step: 2
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10665910E+03    0.00000000E+00    0.32623642E-03
+
+Total Energy:                     -104.5477292469 H        -2844.8885 eV
+Extrapolated to 0K:               -104.5477292469 H        -2844.8885 eV
+Total Mermin free energy:         -104.5477292469 H        -2844.8885 eV
+Force related energy:             -104.5477292469 H        -2844.8885 eV
+
+Volume:                              0.108837E+05 au^3   0.161280E+04 A^3
+Pressure:                           -0.227622E-05 au    -0.669688E+08 Pa
+Maximal force component:             0.976532E-03
+Averaged force norm:                 0.564971E-03
+Maximal Lattice force component:     0.308370E-02 au
+Averaged lattice force norm:         0.185089E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 121, Lattice step: 3
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10665910E+03    0.00000000E+00    0.28231276E-02
+    2   -0.10662205E+03    0.37052835E-01    0.16917243E-02
+    3   -0.10662206E+03   -0.46611446E-05    0.48488017E-03
+
+Total Energy:                     -104.5473614584 H        -2844.8785 eV
+Extrapolated to 0K:               -104.5473614584 H        -2844.8785 eV
+Total Mermin free energy:         -104.5473614584 H        -2844.8785 eV
+Force related energy:             -104.5473614584 H        -2844.8785 eV
+
+Volume:                              0.107519E+05 au^3   0.159327E+04 A^3
+Pressure:                           -0.103804E-04 au    -0.305401E+09 Pa
+Maximal force component:             0.308546E-02
+Averaged force norm:                 0.134210E-02
+Maximal Lattice force component:     0.555745E-02 au
+Averaged lattice force norm:         0.475169E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 122, Lattice step: 3
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10662206E+03    0.00000000E+00    0.14599238E-01
+    2   -0.10667840E+03   -0.56345333E-01    0.93406770E-02
+    3   -0.10667851E+03   -0.10181943E-03    0.37124221E-02
+    4   -0.10667854E+03   -0.33332301E-04    0.12408383E-02
+    5   -0.10667854E+03   -0.20290044E-05    0.27801019E-03
+
+Total Energy:                     -104.5465200765 H        -2844.8556 eV
+Extrapolated to 0K:               -104.5465200765 H        -2844.8556 eV
+Total Mermin free energy:         -104.5465200765 H        -2844.8556 eV
+Force related energy:             -104.5465200765 H        -2844.8556 eV
+
+Volume:                              0.107519E+05 au^3   0.159327E+04 A^3
+Pressure:                            0.173329E-05 au     0.509953E+08 Pa
+Maximal force component:             0.143424E-01
+Averaged force norm:                 0.616120E-02
+Maximal Lattice force component:     0.525930E-02 au
+Averaged lattice force norm:         0.304295E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 123, Lattice step: 3
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10667854E+03    0.00000000E+00    0.11371449E-01
+    2   -0.10663398E+03    0.44558732E-01    0.72212241E-02
+    3   -0.10663405E+03   -0.65408489E-04    0.29863906E-02
+    4   -0.10663407E+03   -0.20927554E-04    0.10214845E-02
+    5   -0.10663407E+03   -0.12940492E-05    0.21722374E-03
+
+Total Energy:                     -104.5474339233 H        -2844.8804 eV
+Extrapolated to 0K:               -104.5474339233 H        -2844.8804 eV
+Total Mermin free energy:         -104.5474339233 H        -2844.8804 eV
+Force related energy:             -104.5474339233 H        -2844.8804 eV
+
+Volume:                              0.107519E+05 au^3   0.159327E+04 A^3
+Pressure:                           -0.789422E-05 au    -0.232256E+09 Pa
+Maximal force component:             0.144244E-02
+Averaged force norm:                 0.772633E-03
+Maximal Lattice force component:     0.549362E-02 au
+Averaged lattice force norm:         0.419434E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 124, Lattice step: 3
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10663407E+03    0.00000000E+00    0.11452635E-02
+    2   -0.10663961E+03   -0.55438177E-02    0.62853502E-03
+
+Total Energy:                     -104.5474875643 H        -2844.8819 eV
+Extrapolated to 0K:               -104.5474875643 H        -2844.8819 eV
+Total Mermin free energy:         -104.5474875643 H        -2844.8819 eV
+Force related energy:             -104.5474875643 H        -2844.8819 eV
+
+Volume:                              0.107519E+05 au^3   0.159327E+04 A^3
+Pressure:                           -0.638515E-05 au    -0.187857E+09 Pa
+Maximal force component:             0.771459E-03
+Averaged force norm:                 0.498486E-03
+Maximal Lattice force component:     0.550429E-02 au
+Averaged lattice force norm:         0.391480E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 125, Lattice step: 3
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10663961E+03    0.00000000E+00    0.24783017E-02
+    2   -0.10664856E+03   -0.89486171E-02    0.14347288E-02
+    3   -0.10664857E+03   -0.20998164E-05    0.63135003E-03
+
+Total Energy:                     -104.5474988325 H        -2844.8822 eV
+Extrapolated to 0K:               -104.5474988325 H        -2844.8822 eV
+Total Mermin free energy:         -104.5474988325 H        -2844.8822 eV
+Force related energy:             -104.5474988325 H        -2844.8822 eV
+
+Volume:                              0.107519E+05 au^3   0.159327E+04 A^3
+Pressure:                           -0.383482E-05 au    -0.112824E+09 Pa
+Maximal force component:             0.202542E-02
+Averaged force norm:                 0.937075E-03
+Maximal Lattice force component:     0.551996E-02 au
+Averaged lattice force norm:         0.352717E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 126, Lattice step: 3
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10664857E+03    0.00000000E+00    0.43622234E-03
+
+Total Energy:                     -104.5475051826 H        -2844.8824 eV
+Extrapolated to 0K:               -104.5475051826 H        -2844.8824 eV
+Total Mermin free energy:         -104.5475051826 H        -2844.8824 eV
+Force related energy:             -104.5475051826 H        -2844.8824 eV
+
+Volume:                              0.107519E+05 au^3   0.159327E+04 A^3
+Pressure:                           -0.469623E-05 au    -0.138168E+09 Pa
+Maximal force component:             0.148472E-02
+Averaged force norm:                 0.712500E-03
+Maximal Lattice force component:     0.551496E-02 au
+Averaged lattice force norm:         0.364446E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 127, Lattice step: 3
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10664522E+03    0.00000000E+00    0.47444650E-02
+    2   -0.10665490E+03   -0.96845792E-02    0.23133321E-02
+    3   -0.10665494E+03   -0.33385235E-04    0.10964924E-02
+    4   -0.10665494E+03   -0.27640285E-05    0.20790275E-03
+
+Total Energy:                     -104.5474861052 H        -2844.8818 eV
+Extrapolated to 0K:               -104.5474861052 H        -2844.8818 eV
+Total Mermin free energy:         -104.5474861052 H        -2844.8818 eV
+Force related energy:             -104.5474861052 H        -2844.8818 eV
+
+Volume:                              0.107519E+05 au^3   0.159327E+04 A^3
+Pressure:                           -0.233770E-05 au    -0.687774E+08 Pa
+Maximal force component:             0.296919E-02
+Averaged force norm:                 0.118812E-02
+Maximal Lattice force component:     0.561254E-02 au
+Averaged lattice force norm:         0.340991E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 128, Lattice step: 3
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10665494E+03    0.00000000E+00    0.25680875E-02
+    2   -0.10664929E+03    0.56475999E-02    0.13720512E-02
+    3   -0.10664930E+03   -0.90099938E-05    0.59592202E-03
+
+Total Energy:                     -104.5475251036 H        -2844.8829 eV
+Extrapolated to 0K:               -104.5475251036 H        -2844.8829 eV
+Total Mermin free energy:         -104.5475251036 H        -2844.8829 eV
+Force related energy:             -104.5475251036 H        -2844.8829 eV
+
+Volume:                              0.107519E+05 au^3   0.159327E+04 A^3
+Pressure:                           -0.373082E-05 au    -0.109764E+09 Pa
+Maximal force component:             0.552952E-03
+Averaged force norm:                 0.334745E-03
+Maximal Lattice force component:     0.554801E-02 au
+Averaged lattice force norm:         0.352915E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 129, Lattice step: 3
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10664930E+03    0.00000000E+00    0.59592202E-03
+
+Total Energy:                     -104.5475251036 H        -2844.8829 eV
+Extrapolated to 0K:               -104.5475251036 H        -2844.8829 eV
+Total Mermin free energy:         -104.5475251036 H        -2844.8829 eV
+Force related energy:             -104.5475251036 H        -2844.8829 eV
+
+Volume:                              0.107519E+05 au^3   0.159327E+04 A^3
+Pressure:                           -0.373082E-05 au    -0.109764E+09 Pa
+Maximal force component:             0.552952E-03
+Averaged force norm:                 0.334745E-03
+Maximal Lattice force component:     0.554801E-02 au
+Averaged lattice force norm:         0.352915E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 130, Lattice step: 4
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10664930E+03    0.00000000E+00    0.13944127E-02
+    2   -0.10667390E+03   -0.24596914E-01    0.85675513E-03
+
+Total Energy:                     -104.5477289523 H        -2844.8885 eV
+Extrapolated to 0K:               -104.5477289523 H        -2844.8885 eV
+Total Mermin free energy:         -104.5477289523 H        -2844.8885 eV
+Force related energy:             -104.5477289523 H        -2844.8885 eV
+
+Volume:                              0.108394E+05 au^3   0.160623E+04 A^3
+Pressure:                            0.135263E-05 au     0.397957E+08 Pa
+Maximal force component:             0.188616E-02
+Averaged force norm:                 0.849647E-03
+Maximal Lattice force component:     0.542203E-03 au
+Averaged lattice force norm:         0.507589E-03 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 131, Lattice step: 4
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10667390E+03    0.00000000E+00    0.86569304E-02
+    2   -0.10663859E+03    0.35307072E-01    0.53581865E-02
+    3   -0.10663862E+03   -0.27570882E-04    0.17089833E-02
+    4   -0.10663863E+03   -0.11647568E-04    0.60718156E-03
+
+Total Energy:                     -104.5474825744 H        -2844.8817 eV
+Extrapolated to 0K:               -104.5474825744 H        -2844.8817 eV
+Total Mermin free energy:         -104.5474825744 H        -2844.8817 eV
+Force related energy:             -104.5474825744 H        -2844.8817 eV
+
+Volume:                              0.108394E+05 au^3   0.160623E+04 A^3
+Pressure:                           -0.598496E-05 au    -0.176083E+09 Pa
+Maximal force component:             0.732558E-02
+Averaged force norm:                 0.327648E-02
+Maximal Lattice force component:     0.222875E-02 au
+Averaged lattice force norm:         0.182628E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 132, Lattice step: 4
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10663863E+03    0.00000000E+00    0.57692465E-02
+    2   -0.10666464E+03   -0.26007381E-01    0.35424835E-02
+    3   -0.10666465E+03   -0.11736161E-04    0.11144400E-02
+    4   -0.10666466E+03   -0.53299769E-05    0.40490545E-03
+
+Total Energy:                     -104.5477613771 H        -2844.8893 eV
+Extrapolated to 0K:               -104.5477613771 H        -2844.8893 eV
+Total Mermin free energy:         -104.5477613771 H        -2844.8893 eV
+Force related energy:             -104.5477613771 H        -2844.8893 eV
+
+Volume:                              0.108394E+05 au^3   0.160623E+04 A^3
+Pressure:                           -0.551970E-06 au    -0.162395E+08 Pa
+Maximal force component:             0.148204E-02
+Averaged force norm:                 0.624445E-03
+Maximal Lattice force component:     0.405845E-03 au
+Averaged lattice force norm:         0.274913E-03 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 133, Lattice step: 4
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10666466E+03    0.00000000E+00    0.98116572E-03
+
+Total Energy:                     -104.5477880969 H        -2844.8901 eV
+Extrapolated to 0K:               -104.5477880969 H        -2844.8901 eV
+Total Mermin free energy:         -104.5477880969 H        -2844.8901 eV
+Force related energy:             -104.5477880969 H        -2844.8901 eV
+
+Volume:                              0.108394E+05 au^3   0.160623E+04 A^3
+Pressure:                           -0.161819E-05 au    -0.476087E+08 Pa
+Maximal force component:             0.836732E-03
+Averaged force norm:                 0.416353E-03
+Maximal Lattice force component:     0.575606E-03 au
+Averaged lattice force norm:         0.529555E-03 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 134, Lattice step: 4
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10666068E+03    0.00000000E+00    0.21161354E-02
+    2   -0.10665421E+03    0.64644032E-02    0.16260473E-02
+    3   -0.10665421E+03   -0.54059987E-06    0.28203018E-03
+
+Total Energy:                     -104.5477833308 H        -2844.8899 eV
+Extrapolated to 0K:               -104.5477833308 H        -2844.8899 eV
+Total Mermin free energy:         -104.5477833308 H        -2844.8899 eV
+Force related energy:             -104.5477833308 H        -2844.8899 eV
+
+Volume:                              0.108394E+05 au^3   0.160623E+04 A^3
+Pressure:                           -0.342455E-05 au    -0.100754E+09 Pa
+Maximal force component:             0.180822E-02
+Averaged force norm:                 0.681050E-03
+Maximal Lattice force component:     0.125454E-02 au
+Averaged lattice force norm:         0.105322E-02 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 135, Lattice step: 4
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10665421E+03    0.00000000E+00    0.62598738E-03
+
+Total Energy:                     -104.5477932048 H        -2844.8902 eV
+Extrapolated to 0K:               -104.5477932048 H        -2844.8902 eV
+Total Mermin free energy:         -104.5477932048 H        -2844.8902 eV
+Force related energy:             -104.5477932048 H        -2844.8902 eV
+
+Volume:                              0.108394E+05 au^3   0.160623E+04 A^3
+Pressure:                           -0.243369E-05 au    -0.716016E+08 Pa
+Maximal force component:             0.109452E-02
+Averaged force norm:                 0.416477E-03
+Maximal Lattice force component:     0.883259E-03 au
+Averaged lattice force norm:         0.758847E-03 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 136, Lattice step: 4
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10665794E+03    0.00000000E+00    0.32104091E-02
+    2   -0.10665516E+03    0.27775684E-02    0.18136479E-02
+    3   -0.10665516E+03   -0.47377241E-05    0.50724370E-03
+
+Total Energy:                     -104.5477769821 H        -2844.8898 eV
+Extrapolated to 0K:               -104.5477769821 H        -2844.8898 eV
+Total Mermin free energy:         -104.5477769821 H        -2844.8898 eV
+Force related energy:             -104.5477769821 H        -2844.8898 eV
+
+Volume:                              0.108394E+05 au^3   0.160623E+04 A^3
+Pressure:                           -0.303641E-05 au    -0.893341E+08 Pa
+Maximal force component:             0.202378E-02
+Averaged force norm:                 0.947322E-03
+Maximal Lattice force component:     0.110545E-02 au
+Averaged lattice force norm:         0.941760E-03 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 137, Lattice step: 4
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10665516E+03    0.00000000E+00    0.16173905E-02
+    2   -0.10665692E+03   -0.17578462E-02    0.81171167E-03
+
+Total Energy:                     -104.5478017191 H        -2844.8904 eV
+Extrapolated to 0K:               -104.5478017191 H        -2844.8904 eV
+Total Mermin free energy:         -104.5478017191 H        -2844.8904 eV
+Force related energy:             -104.5478017191 H        -2844.8904 eV
+
+Volume:                              0.108394E+05 au^3   0.160623E+04 A^3
+Pressure:                           -0.269952E-05 au    -0.794225E+08 Pa
+Maximal force component:             0.569701E-03
+Averaged force norm:                 0.242077E-03
+Maximal Lattice force component:     0.981998E-03 au
+Averaged lattice force norm:         0.838256E-03 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 138, Lattice step: 4
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10665692E+03    0.00000000E+00    0.81171167E-03
+
+Total Energy:                     -104.5478017191 H        -2844.8904 eV
+Extrapolated to 0K:               -104.5478017191 H        -2844.8904 eV
+Total Mermin free energy:         -104.5478017191 H        -2844.8904 eV
+Force related energy:             -104.5478017191 H        -2844.8904 eV
+
+Volume:                              0.108394E+05 au^3   0.160623E+04 A^3
+Pressure:                           -0.269952E-05 au    -0.794225E+08 Pa
+Maximal force component:             0.569701E-03
+Averaged force norm:                 0.242077E-03
+Maximal Lattice force component:     0.981998E-03 au
+Averaged lattice force norm:         0.838256E-03 au
+>> Charges saved for restart in charges.bin
+
+Geometry converged
+
+--------------------------------------------------------------------------------
+DFTB+ running times                          cpu [s]             wall clock [s]
+--------------------------------------------------------------------------------
+Global initialisation                  +       0.01 (  0.0%)       0.04 (  0.0%)
+Pre-SCC initialisation                 +       2.10 (  1.2%)       2.11 (  1.2%)
+SCC                                    +     164.83 ( 93.4%)     168.91 ( 92.7%)
+Post-SCC processing                    +       9.49 (  5.4%)      11.10 (  6.1%)
+--------------------------------------------------------------------------------
+Missing                                +       0.00 (  0.0%)       0.02 (  0.0%)
+Total                                  =     176.43 (100.0%)     182.18 (100.0%)
+--------------------------------------------------------------------------------

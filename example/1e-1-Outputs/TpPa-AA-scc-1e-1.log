@@ -1,0 +1,212 @@
+|===============================================================================
+|
+|  DFTB+ release 24.1
+|
+|  Copyright (C) 2006 - 2024  DFTB+ developers group
+|
+|===============================================================================
+|
+|  When publishing results obtained with DFTB+, please cite the following
+|  reference:
+|
+|  * DFTB+, a software package for efficient approximate density functional
+|    theory based atomistic simulations, J. Chem. Phys. 152, 124101 (2020).
+|    [doi: 10.1063/1.5143190]
+|
+|  You should also cite additional publications crediting the parametrization
+|  data you use. Please consult the documentation of the SK-files for the
+|  references.
+|
+|===============================================================================
+
+Reading input file 'dftb_in.hsd'
+Parser version: 14
+
+--------------------------------------------------------------------------------
+Reading SK-files:
+/project/design-lab/software/DFTB+/3ob-3-1/O-O.skf
+/project/design-lab/software/DFTB+/3ob-3-1/O-N.skf
+/project/design-lab/software/DFTB+/3ob-3-1/O-C.skf
+/project/design-lab/software/DFTB+/3ob-3-1/O-H.skf
+/project/design-lab/software/DFTB+/3ob-3-1/N-N.skf
+/project/design-lab/software/DFTB+/3ob-3-1/N-C.skf
+/project/design-lab/software/DFTB+/3ob-3-1/N-H.skf
+/project/design-lab/software/DFTB+/3ob-3-1/C-C.skf
+/project/design-lab/software/DFTB+/3ob-3-1/C-H.skf
+/project/design-lab/software/DFTB+/3ob-3-1/H-H.skf
+Done.
+WARNING!
+-> This driver is deprecated and will be removed in future versions.
+Please use the GeometryOptimisation driver instead.
+Path: dftbplusinput/Driver/ConjugateGradient
+Line: 5-13 (File: dftb_in.hsd)
+
+
+
+Processed input in HSD format written to 'dftb_pin.hsd'
+
+Starting initialization...
+--------------------------------------------------------------------------------
+WARNING!
+-> Dipole printed for extended system : value printed is not well defined
+MPI processes:               8
+OpenMP threads:              1
+BLACS orbital grid size:     2 x 4
+BLACS atom grid size:        2 x 3
+Chosen random seed:          533458005
+Current stacksize:           unlimited
+Mode:                        Conjugate gradient relaxation
+Self consistent charges:     Yes
+SCC-tolerance:                 0.100000E+00
+Max. scc iterations:                   1000
+Shell resolved Hubbard:      No
+Spin polarisation:           No
+Nr. of up electrons:           117.000000
+Nr. of down electrons:         117.000000
+Periodic boundaries:         Yes
+Lattice optimisation:        Yes
+Pressure:                        0.000000
+Electronic solver:           Relatively robust
+Mixer:                       Broyden mixer
+Mixing parameter:                  0.200000
+Maximal SCC-cycles:                    1000
+Nr. of chrg. vec. in memory:           1000
+Nr. of moved atoms:                      72
+Max. nr. of geometry steps:          100000
+Force tolerance:               0.100000E+00
+Electronic temperature:              0.100000E-07 H      0.272114E-06 eV
+Initial charges:             Set automatically (system chrg:   0.000E+00)
+Included shells:             O:  s, p
+                             N:  s, p
+                             C:  s, p
+                             H:  s
+K-points and weights:           1:  0.125000  0.125000  0.125000     0.031250
+                                2:  0.125000  0.125000  0.375000     0.031250
+                                3:  0.125000  0.125000  0.625000     0.031250
+                                4:  0.125000  0.125000  0.875000     0.031250
+                                5:  0.125000  0.375000  0.125000     0.031250
+                                6:  0.125000  0.375000  0.375000     0.031250
+                                7:  0.125000  0.375000  0.625000     0.031250
+                                8:  0.125000  0.375000  0.875000     0.031250
+                                9:  0.125000  0.625000  0.125000     0.031250
+                               10:  0.125000  0.625000  0.375000     0.031250
+                               11:  0.125000  0.625000  0.625000     0.031250
+                               12:  0.125000  0.625000  0.875000     0.031250
+                               13:  0.125000  0.875000  0.125000     0.031250
+                               14:  0.125000  0.875000  0.375000     0.031250
+                               15:  0.125000  0.875000  0.625000     0.031250
+                               16:  0.125000  0.875000  0.875000     0.031250
+                               17:  0.375000  0.125000  0.125000     0.031250
+                               18:  0.375000  0.125000  0.375000     0.031250
+                               19:  0.375000  0.125000  0.625000     0.031250
+                               20:  0.375000  0.125000  0.875000     0.031250
+                               21:  0.375000  0.375000  0.125000     0.031250
+                               22:  0.375000  0.375000  0.375000     0.031250
+                               23:  0.375000  0.375000  0.625000     0.031250
+                               24:  0.375000  0.375000  0.875000     0.031250
+                               25:  0.375000  0.625000  0.125000     0.031250
+                               26:  0.375000  0.625000  0.375000     0.031250
+                               27:  0.375000  0.625000  0.625000     0.031250
+                               28:  0.375000  0.625000  0.875000     0.031250
+                               29:  0.375000  0.875000  0.125000     0.031250
+                               30:  0.375000  0.875000  0.375000     0.031250
+                               31:  0.375000  0.875000  0.625000     0.031250
+                               32:  0.375000  0.875000  0.875000     0.031250
+
+K-points in absolute space:     1:  0.002933  0.005079  0.019455
+                                2:  0.002933  0.005079  0.058365
+                                3:  0.002933  0.005079  0.097275
+                                4:  0.002933  0.005079  0.136185
+                                5:  0.002933  0.011852  0.019455
+                                6:  0.002933  0.011852  0.058365
+                                7:  0.002933  0.011852  0.097275
+                                8:  0.002933  0.011852  0.136185
+                                9:  0.002933  0.018624  0.019455
+                               10:  0.002933  0.018624  0.058365
+                               11:  0.002933  0.018624  0.097275
+                               12:  0.002933  0.018624  0.136185
+                               13:  0.002933  0.025397  0.019455
+                               14:  0.002933  0.025397  0.058365
+                               15:  0.002933  0.025397  0.097275
+                               16:  0.002933  0.025397  0.136185
+                               17:  0.008798  0.008466  0.019455
+                               18:  0.008798  0.008466  0.058365
+                               19:  0.008798  0.008466  0.097275
+                               20:  0.008798  0.008466  0.136185
+                               21:  0.008798  0.015238  0.019455
+                               22:  0.008798  0.015238  0.058365
+                               23:  0.008798  0.015238  0.097275
+                               24:  0.008798  0.015238  0.136185
+                               25:  0.008798  0.022011  0.019455
+                               26:  0.008798  0.022011  0.058365
+                               27:  0.008798  0.022011  0.097275
+                               28:  0.008798  0.022011  0.136185
+                               29:  0.008798  0.028783  0.019455
+                               30:  0.008798  0.028783  0.058365
+                               31:  0.008798  0.028783  0.097275
+                               32:  0.008798  0.028783  0.136185
+
+Using Lennard-Jones dispersion corrections
+Full 3rd order correction    Yes
+Damped SCC                   Yes
+Damped species(s):           H                                                 
+Extra options:
+                             Mulliken analysis
+Force type                   original
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 0, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1    0.00000000E+00    0.00000000E+00    0.93722960E+00
+    2   -0.10649712E+03   -0.10649712E+03    0.62175759E+00
+    3   -0.10662675E+03   -0.12962861E+00    0.13088642E+00
+    4   -0.10668684E+03   -0.60092823E-01    0.56884045E-01
+
+Total Energy:                     -104.5117840889 H        -2843.9103 eV
+Extrapolated to 0K:               -104.5117840889 H        -2843.9103 eV
+Total Mermin free energy:         -104.5117840889 H        -2843.9103 eV
+Force related energy:             -104.5117840889 H        -2843.9103 eV
+
+Volume:                              0.101095E+05 au^3   0.149808E+04 A^3
+Pressure:                            0.405099E-04 au     0.119184E+10 Pa
+Maximal force component:             0.514733E-01
+Averaged force norm:                 0.249350E-01
+Maximal Lattice force component:     0.322969E-01 au
+Averaged lattice force norm:         0.210557E-01 au
+>> Charges saved for restart in charges.bin
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 1, Lattice step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10669437E+03    0.00000000E+00    0.56884045E-01
+
+Total Energy:                     -104.5117840889 H        -2843.9103 eV
+Extrapolated to 0K:               -104.5117840889 H        -2843.9103 eV
+Total Mermin free energy:         -104.5117840889 H        -2843.9103 eV
+Force related energy:             -104.5117840889 H        -2843.9103 eV
+
+Volume:                              0.101095E+05 au^3   0.149808E+04 A^3
+Pressure:                            0.405099E-04 au     0.119184E+10 Pa
+Maximal force component:             0.514733E-01
+Averaged force norm:                 0.249350E-01
+Maximal Lattice force component:     0.322969E-01 au
+Averaged lattice force norm:         0.210557E-01 au
+>> Charges saved for restart in charges.bin
+
+Geometry converged
+
+--------------------------------------------------------------------------------
+DFTB+ running times                          cpu [s]             wall clock [s]
+--------------------------------------------------------------------------------
+Global initialisation                  +       0.00 (  0.1%)       0.01 (  0.6%)
+Pre-SCC initialisation                 +       0.03 (  1.4%)       0.03 (  1.3%)
+SCC                                    +       2.10 ( 92.0%)       2.15 ( 90.7%)
+Post-SCC processing                    +       0.15 (  6.4%)       0.17 (  7.2%)
+--------------------------------------------------------------------------------
+Missing                                +       0.00 (  0.1%)       0.00 (  0.1%)
+Total                                  =       2.29 (100.0%)       2.37 (100.0%)
+--------------------------------------------------------------------------------
