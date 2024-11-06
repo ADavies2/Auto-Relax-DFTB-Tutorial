@@ -9,7 +9,6 @@ if ! ((${#args[@]}==2)); then
 fi
 
 # Input variables
-# Python code
 # What is the name of your input file, which includes the COF name, starting tolerance, etc.
 INPUT_FILE=${args[0]}
 # What you'd like your job to be called (e.g. final_final_job_v4):
