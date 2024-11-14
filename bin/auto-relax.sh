@@ -358,6 +358,8 @@ Options {
               RESULT='none'
               if [[ $5 == '1e-5' ]]; then
                 sed -i "s/.*<<<.*/   <<< '1e-4-Out.gen'/g" dftb_in.hsd
+              elif [[ $5 == '1e-1' ]]; then
+                break
               else
                 sed -i "s/.*<<<.*/   <<< '$5-Out.gen'/g" dftb_in.hsd
               fi
