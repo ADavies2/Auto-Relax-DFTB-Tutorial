@@ -94,8 +94,3 @@ You will also need to make necessary changes to **submit_auto-relax** for your H
 
 ## Known Issues
 
-- 11/13/2024: DFTB+ on the MedicineBow HPC is being benchmarked currently. Once benchmarking is done, auto-relax.sh will be updated based on the benchmarking results. 
-
-- DFTB+ is known to "stall" on the Beartooth HPC. When this happens, the calculation continues taking up time on the clock, but no data is written to the output files. **auto-relax.sh** attempts to account for this by checking for file size changes, and if the file size has not changed in 3 minutes, it assumes the job has stalled and kills the current iteraction job. Then, it uses the .gen produced from this iteration as the new input, lowers the number of tasks-per-node, and resubmits the calculation to restart from the last written point. It will be noted in **{BASH-JOBNAME}.out** when a job has stalled and been restarted. 
-    - Sometimes, this can happen at the very beginning of the calculation before any data is written to the {TOL}.gen file. When this happens, **auto-relax.sh** will still tell DFTB+ to read this .gen file as the next input, but DFTB+ will crash because there is no data in the .gen file.
-    - To circumnavigate this, instead of running from your current tolerance, for instance, if the job stalls at the first step of the 1e-1 iteration, changed **relax.in** to start from the next iteration, i.e., 1e-2. This usually fixes the problem and the calculation will continue running. Note, though, that this will not generate a 1e-1-Outputs directory, as this iteration has been skipped.

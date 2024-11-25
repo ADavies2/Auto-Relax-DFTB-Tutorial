@@ -67,7 +67,7 @@ scc_dftb_in () {
 # 3 = $RESTART
 # 4 = myHUBBARD
 # 5 = myMOMENTUM
-# 6 = stacking
+# 6 = $STACKING
 if [[ $1 == *"gen"* ]]; then
     cat > dftb_in.hsd <<!
 Geometry = GenFormat {
@@ -155,7 +155,7 @@ Filling = Fermi {
   cat >> dftb_in.hsd <<!
 
 Parallel = {
-  Groups = 1
+  Groups = 8
   UseOmpThreads = Yes }
 
 ParserOptions {
@@ -249,22 +249,9 @@ zeo () {
 scc1 () {
 # $1 = $PARTITION
 # $2 = $JOBNAME
-# $3 = $STALL
-# $4 = $TASK
-# $5 = $TOL
-# $6 = $COF
-  if [[ $3 != 'none' ]]; then
-    if (($4 == 16)); then
-      TASK=8
-      gen_submit $TASK 1 $2 $1
-    elif (($4 == 8)); then
-      TASK=4
-      gen_submit $TASK 1 $2 $1
-    fi
-  else
-    TASK=8
-    gen_submit $TASK 1 $2 $1
-  fi
+# $3 = $TOL
+# $4 = $COF
+  gen_submit 8 1 $2 $1
   submit=($(sbatch submit_$2))
   JOBID=(${submit[3]})
   echo "$JOBID submitted"
@@ -278,7 +265,7 @@ scc1 () {
     else
         log_size=($(ls -l "$2.log"))
         size=(${log_size[4]})
-        sleep 120s
+        sleep 60s
         log_size2=($(ls -l "$2.log"))
         size2=(${log_size2[4]})
         if [[ $size2 > $size ]]; then
@@ -286,36 +273,35 @@ scc1 () {
         elif [[ $size2 == $size ]]; then
           sleep 30s
           if grep -q "Geometry converged" detailed.out && grep -q "Geometry converged" $2.log; then
-            if [[ $5 == '1e-5' ]]; then
+            if [[ $3 == '1e-5' ]]; then
               if [ ! -d "1e-4-Outputs" ]; then
                 mkdir '1e-4-Outputs'
               fi
-              densities=($(printf "$6\ngen\n1e-4-Out.gen" | atomdensities))
-              calculate_energies '1e-4-Out.gen' $6
-              zeo $6
-              mv detailed* $2.log 1e-4-Out.* charges.* eigenvec.bin submit_$2 Energies.dat *.densities *.res *.sa *.vol *.zeo band.out $6-Out-POSCAR 1e-4-Outputs/
-              rm *.gen *.xyz $6*.out *cif
-              RESULT='success1'
-              STALL='none'
+              densities=($(printf "$4\ngen\n1e-4-Out.gen" | atomdensities))
+              calculate_energies '1e-4-Out.gen' $4
+              zeo $4
+              mv detailed* $2.log 1e-4-Out.* charges.* eigenvec.bin submit_$2 Energies.dat *.densities *.res *.sa *.vol *.zeo band.out $4-Out-POSCAR 1e-4-Outputs/
+              rm *.gen *.xyz $4*.out *cif
+              RESULT='final'
               break
-            elif [[ $5 == '1e-1' || $5 = '1e-2' || $5 = '1e-3' ]]; then
-              if [ ! -d "$5-Outputs" ]; then
-                mkdir $5-Outputs
+            elif [[ $3 == '1e-1' || $3 = '1e-2' || $3 = '1e-3' ]]; then
+              if [ ! -d "$3-Outputs" ]; then
+                mkdir $3-Outputs
               fi
-              cp $5-Out.gen charges.bin $5-Outputs/
-              mv detailed.out $2.log submit_$2 $5-Outputs/
+              cp $3-Out.gen charges.bin $3-Outputs/
+              mv detailed.out $2.log submit_$2 $3-Outputs/
               sed -i 's/.*Geometry.*/Geometry = GenFormat {/g' dftb_in.hsd
-              sed -i "s/.*<<<.*/  <<< ""$5-Out.gen""/g" dftb_in.hsd
+              sed -i "s/.*<<<.*/  <<< ""$3-Out.gen""/g" dftb_in.hsd
               sed -i 's/.*ReadInitialCharges.*/ReadInitialCharges = Yes/g' dftb_in.hsd
-              if [ $5 == '1e-1' ]; then
+              if [ $3 == '1e-1' ]; then
                 TOL='1e-2'
                 sed -i "s/.*MaxForceComponent.*/  MaxForceComponent = $TOL/g" dftb_in.hsd
                 sed -i "s/.*OutputPrefix.*/  OutputPrefix = "$TOL-Out" }/g" dftb_in.hsd
-              elif [ $5 == '1e-2' ]; then
+              elif [ $3 == '1e-2' ]; then
                 TOL='1e-3'
                 sed -i "s/.*MaxForceComponent.*/  MaxForceComponent = $TOL/g" dftb_in.hsd
                 sed -i "s/.*OutputPrefix.*/  OutputPrefix = "$TOL-Out" }/g" dftb_in.hsd
-              elif [ $5 == '1e-3' ]; then
+              elif [ $3 == '1e-3' ]; then
                 TOL='1e-5'
                 sed -i 's/.*MaxForceComponent.*/  MaxForceComponent = 1e-4/g' dftb_in.hsd
                 sed -i 's/.*OutputPrefix.*/  OutputPrefix = "1e-4-Out" }/g' dftb_in.hsd
@@ -335,9 +321,8 @@ Options {
               fi
               sed -i "s/.*SCCTolerance.*/SCCTolerance = $TOL/g" dftb_in.hsd
               echo "$2 has completed."
-              JOBNAME="$6-scc-$TOL"
-              RESULT='success2'
-              STALL='none'
+              JOBNAME="$4-scc-$TOL"
+              RESULT='iteration'
               break
             fi
           elif grep -q "SCC is NOT converged" $2.log; then
@@ -346,25 +331,6 @@ Options {
           elif grep -q "ERROR!" $2.log; then
             echo "DFTB+ Error. User trouble-shoot required."
             exit
-          else
-            sleep 180s
-            log_size3=($(ls -l "$2.log"))
-            size3=(${log_size3[4]})
-            if [[ $size3 == $size2 ]]; then
-              echo "$JOBID has stalled. Restarting..."
-              qdel $JOBID
-              sleep 5s
-              STALL='scc1'
-              RESULT='none'
-              if [[ $5 == '1e-5' ]]; then
-                sed -i "s/.*<<<.*/   <<< '1e-4-Out.gen'/g" dftb_in.hsd
-              elif [[ $5 == '1e-1' ]]; then
-                break
-              else
-                sed -i "s/.*<<<.*/   <<< '$5-Out.gen'/g" dftb_in.hsd
-              fi
-              break
-            fi
           fi
         fi
       fi
@@ -384,8 +350,7 @@ RESTART=($(sed -n 4p $INSTRUCT))
 PARTITION=($(sed -n 5p $INSTRUCT))
 STACKING=($(sed -n 6p $INSTRUCT))
 
-STALL='none'
-TASK=16
+TASK=8
 JOBNAME="$COF-scc-$TOL"
 
 # Read input geometry file to get atom types and number of atoms
@@ -407,103 +372,30 @@ done
 # Write dftb_in.hsd for the first calculation
 scc_dftb_in $GEO $TOL $RESTART myHUBBARD myMOMENTUM $STACKING
 
-# LOOP 1 (LIGHTBLUE) RESULTS, SUBMITTING LOOP 2 (LIGHTGREEN) CALCULATIONS
 # submit the first calculation
-scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF #16 tasks
-if [[ $STALL == 'scc1' ]]; then
-  scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF #8 tasks
-  if [[ $STALL == 'scc1' ]]; then
-    scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF #4 tasks
-      if [ $RESULT == 'success1' ]; then
-        echo "$COF is fully relaxed!"
-        exit
-      elif [ $RESULT == 'success2' ]; then
-        scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF $RESULT
-      fi
-  elif [ $RESULT == 'success1' ]; then
-    echo "$COF is fully relaxed!"
-    exit
-  elif [ $RESULT == 'success2' ]; then
-    scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF $RESULT
-  fi
-elif [ $RESULT == 'success1' ]; then
+scc1 $PARTITION $JOBNAME $TOL $COF
+if [ $RESULT == 'final' ]; then
   echo "$COF is fully relaxed!"
   exit
-elif [ $RESULT == 'success2' ]; then
-  scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF $RESULT
-fi
-
-# LOOP 2 (LIGHTBLUE) RESULTS, SUBMITTING LOOP 2 (LIGHTGREEN) CALCULATIONS
-# submit the first calculation
-if [[ $STALL == 'scc1' ]]; then
-  scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF #8 tasks
-  if [[ $STALL == 'scc1' ]]; then
-    scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF #4 tasks
-      if [ $RESULT == 'success1' ]; then
-        echo "$COF is fully relaxed!"
-        exit
-      elif [ $RESULT == 'success2' ]; then
-        scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF $RESULT
-      fi
-  elif [ $RESULT == 'success1' ]; then
+elif [ $RESULT == 'iteration' ]; then
+  # Submit the second calculation
+  scc1 $PARTITION $JOBNAME $TOL $COF $RESULT
+  if [ $RESULTS == 'final' ]; then
     echo "$COF is fully relaxed!"
     exit
-  elif [ $RESULT == 'success2' ]; then
-    scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF $RESULT
-  fi
-elif [ $RESULT == 'success1' ]; then
-  echo "$COF is fully relaxed!"
-  exit
-elif [ $RESULT == 'success2' ]; then
-  scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF $RESULT
-fi
-
-# LOOP 3 (LIGHTBLUE) RESULTS, SUBMITTING LOOP 2 (LIGHTGREEN) CALCULATIONS
-# submit the first calculation
-if [[ $STALL == 'scc1' ]]; then
-  scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF #8 tasks
-  if [[ $STALL == 'scc1' ]]; then
-    scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF #4 tasks
-      if [ $RESULT == 'success1' ]; then
-        echo "$COF is fully relaxed!"
-        exit
-      elif [ $RESULT == 'success2' ]; then
-        scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF $RESULT
+  elif [ $RESULT == 'iteration' ]; then
+    # Submit the third calculation
+    scc1 $PARTITION $JOBNAME $TOL $COF $RESULT
+    if [ $RESULTS == 'final' ]; then
+      echo "$COF is fully relaxed!"
+      exit
+    elif [ $RESULT == 'iteration' ]; then
+      # Submit the final calculation
+      scc1 $PARTITION $JOBNAME $TOL $COF $RESULT
+      if [ $RESULTS == 'final' ]; then
+      echo "$COF is fully relaxed!"
+      exit
       fi
-  elif [ $RESULT == 'success1' ]; then
-    echo "$COF is fully relaxed!"
-    exit
-  elif [ $RESULT == 'success2' ]; then
-    scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF $RESULT
+    fi
   fi
-elif [ $RESULT == 'success1' ]; then
-  echo "$COF is fully relaxed!"
-  exit
-elif [ $RESULT == 'success2' ]; then
-  scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF $RESULT
-fi
-
-# LOOP 4 (LIGHTBLUE) RESULTS, SUBMITTING LOOP 2 (LIGHTGREEN) CALCULATIONS
-# submit the first calculation
-if [[ $STALL == 'scc1' ]]; then
-  scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF #8 tasks
-  if [[ $STALL == 'scc1' ]]; then
-    scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF #4 tasks
-      if [ $RESULT == 'success1' ]; then
-        echo "$COF is fully relaxed!"
-        exit
-      elif [ $RESULT == 'success2' ]; then
-        scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF $RESULT
-      fi
-  elif [ $RESULT == 'success1' ]; then
-    echo "$COF is fully relaxed!"
-    exit
-  elif [ $RESULT == 'success2' ]; then
-    scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF $RESULT
-  fi
-elif [ $RESULT == 'success1' ]; then
-  echo "$COF is fully relaxed!"
-  exit
-elif [ $RESULT == 'success2' ]; then
-  scc1 $PARTITION $JOBNAME $STALL $TASK $TOL $COF $RESULT
 fi
