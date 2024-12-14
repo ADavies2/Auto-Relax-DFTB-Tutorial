@@ -380,19 +380,19 @@ if [ $RESULT == 'final' ]; then
 elif [ $RESULT == 'iteration' ]; then
   # Submit the second calculation
   scc1 $PARTITION $JOBNAME $TOL $COF $RESULT
-  if [ $RESULTS == 'final' ]; then
+  if [ $RESULT == 'final' ]; then
     echo "$COF is fully relaxed!"
     exit
   elif [ $RESULT == 'iteration' ]; then
     # Submit the third calculation
     scc1 $PARTITION $JOBNAME $TOL $COF $RESULT
-    if [ $RESULTS == 'final' ]; then
+    if [ $RESULT == 'final' ]; then
       echo "$COF is fully relaxed!"
       exit
     elif [ $RESULT == 'iteration' ]; then
       # Submit the final calculation
       scc1 $PARTITION $JOBNAME $TOL $COF $RESULT
-      if [ $RESULTS == 'final' ]; then
+      if [ $RESULT == 'final' ]; then
       echo "$COF is fully relaxed!"
       exit
       fi
